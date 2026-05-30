@@ -1,0 +1,67 @@
+# יוסי חי לוי מעסה מוסמך ומאמן כושר אישי — Generative Engine Optimization Map
+
+> A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.
+
+---
+
+## Pages
+
+### בית
+https://-d9dc2cfe.zappy5.app
+A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic tre
+
+## Legal & Policy
+
+### Privacy Policy
+https://-d9dc2cfe.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-d9dc2cfe.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-d9dc2cfe.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://-d9dc2cfe.zappy5.app
+- Endpoint: https://-d9dc2cfe.zappy5.app/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox, required)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About יוסי חי לוי מעסה מוסמך ומאמן כושר אישי
+A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.
+
+## Target Audience
+- אנשי מקצוע בגילאי 30-50
+- חובבי כושר
+- נשים בהריון
+- גברים בלבד כל הגילאים
+
+## Industry
+Massage & Wellness
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://-d9dc2cfe.zappy5.app/sitemap.xml
+- Robots: https://-d9dc2cfe.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://-d9dc2cfe.zappy5.app/llms-full.txt
