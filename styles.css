@@ -5948,6 +5948,331 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     padding: 14px 18px;
   }
 }
+
+/* AI-generated section */
+/* =============================================
+   FAQ WELLNESS SECTION — The Hive Thai Massage
+   ============================================= */
+
+.faq-wellness-section {
+  background: linear-gradient(160deg, #fdf6f0 0%, #f5ede4 50%, #fdf6f0 100%);
+  padding: 90px 20px 80px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background blobs */
+.faq-wellness-section::before,
+.faq-wellness-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.faq-wellness-section::before {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 120, 92, 0.08) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.faq-wellness-section::after {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(212, 132, 90, 0.07) 0%, transparent 70%);
+  bottom: -80px;
+  right: -60px;
+}
+
+/* Container */
+.faq-wellness-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Header ---- */
+.faq-wellness-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.faq-wellness-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.faq-wellness-icon svg {
+  filter: drop-shadow(0 4px 12px rgba(201, 120, 92, 0.25));
+}
+
+.faq-wellness-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  color: #3a2218;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.faq-wellness-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #7a5540;
+  margin: 0 0 28px 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.faq-wellness-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary, linear-gradient(135deg, #C8673A 0%, #D4845A 100%));
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ---- FAQ List ---- */
+.faq-wellness-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---- FAQ Item Card ---- */
+.faq-wellness-item {
+  background: #ffffff;
+  border: 1px solid rgba(201, 120, 92, 0.28);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(201, 120, 92, 0.08), 0 1px 3px rgba(0,0,0,0.04);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.25s ease, border-color 0.3s ease;
+}
+
+.faq-wellness-item:hover {
+  box-shadow: 0 6px 24px rgba(201, 120, 92, 0.16), 0 2px 8px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+  border-color: rgba(201, 120, 92, 0.5);
+}
+
+.faq-wellness-item.active {
+  border-color: rgba(201, 120, 92, 0.55);
+  box-shadow: 0 6px 28px rgba(201, 120, 92, 0.18), 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ---- Question Button ---- */
+.faq-wellness-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  text-align: right;
+  direction: rtl;
+  gap: 16px;
+  transition: background 0.25s ease;
+  font-family: system-ui, sans-serif;
+}
+
+.faq-wellness-question:hover {
+  background: rgba(201, 120, 92, 0.05);
+}
+
+.faq-wellness-question:focus-visible {
+  outline: 3px solid var(--primary, #C9785C);
+  outline-offset: -3px;
+  border-radius: 14px;
+}
+
+.faq-wellness-item.active .faq-wellness-question {
+  background: rgba(201, 120, 92, 0.06);
+}
+
+.faq-wellness-question-text {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-weight: 700;
+  color: #3a2218;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* ---- Chevron ---- */
+.faq-wellness-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(201, 120, 92, 0.1);
+  color: var(--primary, #C9785C);
+  transition: transform 0.35s ease, background 0.25s ease;
+}
+
+.faq-wellness-item.active .faq-wellness-chevron {
+  transform: rotate(180deg);
+  background: var(--primary, #C9785C);
+  color: #ffffff;
+}
+
+/* ---- Answer Panel ---- */
+.faq-wellness-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.38s ease, opacity 0.28s ease, padding 0.28s ease;
+  padding: 0 24px;
+}
+
+.faq-wellness-item.active .faq-wellness-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding-bottom: 22px;
+}
+
+/* ---- Answer Inner ---- */
+.faq-wellness-answer-inner {
+  border-right: 3px solid var(--primary, #C9785C);
+  padding-right: 16px;
+  padding-top: 4px;
+}
+
+.faq-wellness-answer-inner p {
+  font-size: clamp(0.93rem, 2vw, 1rem);
+  color: #5a3d2b;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.faq-wellness-answer-inner p strong {
+  color: #3a2218;
+  font-weight: 700;
+}
+
+/* ---- CTA Footer ---- */
+.faq-wellness-cta {
+  margin-top: 52px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.faq-wellness-cta-text {
+  font-size: 1.1rem;
+  color: #7a5540;
+  font-weight: 500;
+  margin: 0;
+}
+
+.faq-wellness-cta-btn {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(135deg, #C8673A 0%, #D4845A 100%));
+  color: #ffffff;
+  font-family: system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  box-shadow: 0 4px 18px rgba(201, 120, 92, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.faq-wellness-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201, 120, 92, 0.45);
+  opacity: 0.93;
+}
+
+.faq-wellness-cta-btn:focus-visible {
+  outline: 3px solid var(--primary, #C9785C);
+  outline-offset: 3px;
+}
+
+.faq-wellness-cta-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 12px rgba(201, 120, 92, 0.3);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 768px) {
+  .faq-wellness-section {
+    padding: 60px 16px 60px;
+  }
+
+  .faq-wellness-header {
+    margin-bottom: 36px;
+  }
+
+  .faq-wellness-question {
+    padding: 18px 18px;
+    gap: 12px;
+  }
+
+  .faq-wellness-item.active .faq-wellness-answer {
+    padding-bottom: 18px;
+  }
+
+  .faq-wellness-answer {
+    padding: 0 18px;
+  }
+
+  .faq-wellness-answer-inner {
+    padding-right: 14px;
+  }
+
+  .faq-wellness-chevron {
+    width: 32px;
+    height: 32px;
+  }
+
+  .faq-wellness-cta {
+    margin-top: 40px;
+  }
+
+  .faq-wellness-cta-btn {
+    padding: 13px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-wellness-section {
+    padding: 48px 12px 48px;
+  }
+
+  .faq-wellness-question {
+    padding: 16px 14px;
+  }
+
+  .faq-wellness-answer {
+    padding: 0 14px;
+  }
+
+  .faq-wellness-answer-inner {
+    padding-right: 12px;
+  }
+
+  .faq-wellness-list {
+    gap: 12px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
