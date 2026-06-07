@@ -28,7 +28,10 @@ Information about WCAG compliance and accessibility features.
 
 ## How to Contact Us
 
-- (No contact details configured yet.)
+- Email: yossef2411@outlook.com
+- Phone: +972526842282
+- Phone (tel): tel:+972526842282
+- Address: כביר 34 תל אביב יפו , תל אביב יפו , מרכז , ישראל 
 
 ### Contact form
 - URL: https://example.com
