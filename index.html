@@ -161,26 +161,31 @@
       // Track button clicks (counted as actions)
       if (target.tagName === 'BUTTON' || target.closest('button')) {
         var button = target.tagName === 'BUTTON' ? target : target.closest('button');
-        trackEvent('click', {
+        var clickMeta = {
           element: 'button',
           text: button.textContent.trim().substring(0, 100),
           id: button.id || null,
           class: button.className || null
-        });
+        };
+        
+        trackEvent('click', clickMeta);
       }
       
       // Track link clicks (navigation - not counted as actions)
       else if (target.tagName === 'A' || target.closest('a')) {
         var link = target.tagName === 'A' ? target : target.closest('a');
-        trackEvent('navigation', {
+        var navMeta = {
           element: 'link',
           text: link.textContent.trim().substring(0, 100),
           href: link.href,
           external: link.hostname !== window.location.hostname
-        });
+        };
+        
+        trackEvent('navigation', navMeta);
       }
     }, true);
   }
+  
   
   // Track form submissions
   if (config.trackFormSubmissions) {
@@ -881,15 +886,15 @@
         </svg>
       </div>
       <p class="index-services-label" style="color: rgb(47, 41, 37) !important;"><b>הטיפולים שלנו</b></p>
-      <h2 class="index-services-heading" >מה מחכה לך כאן</h2>
+      <h2 class="index-services-heading" style="">מה מחכה לך כאן</h2>
       <p class="index-services-subheading">כל טיפול מותאם אישית לצרכים שלך — בין אם אתה מגיע עם כאב, עם עייפות, או פשוט עם הצורך לנשום לרגע.</p>
     </div>
 
     <!-- 3-card grid -->
-    <div class="index-services-grid zappy-preserve-css-grid" id="zappy-auto-grid-1780184617894-0fem6u" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="384" data-original-gap="24px" style="--zappy-grid-cols: repeat(3, minmax(0, 1fr)); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
+    <div class="index-services-grid zappy-preserve-css-grid" id="zappy-auto-grid-1780184617894-0fem6u" data-zappy-auto-grid="true" data-original-item-width="384" data-original-gap="24px" style="--zappy-grid-cols: repeat(3, minmax(0, 1fr)); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
 
       <!-- Card 1: Therapeutic massage -->
-      <article class="index-services-card" style="background-color: rgb(255, 255, 255) !important; padding: 32px !important; box-sizing: border-box; grid-area: auto !important;" data-grid-item-index="0" id="zappy-section-2">
+      <article class="index-services-card" style="background-color: rgb(255, 255, 255) !important; padding: 32px !important; box-sizing: border-box; grid-area: auto !important;" id="zappy-section-2" data-grid-item-index="0">
         <div class="index-services-card-icon" aria-hidden="true">
           <svg data-element-type="icon" data-icon-type="svg" width="48" height="48" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-element-id="icon-1780184661979-ciuhwnrhs" style="width: 48px !important; height: 48px !important; color: rgb(47, 41, 37);" data-size-adjusted="true">
             <circle cx="22" cy="22" r="20" stroke="#C9785C" stroke-width="1.5" opacity="0.25"></circle>
@@ -900,24 +905,13 @@
           </svg>
         </div>
         <div class="index-services-card-content">
-          <ul ><li><br></li></ul><ul ><li>&nbsp;עיסוי שיכול למקד לאזורים בעייתיים ספציפיים בקשרי שרירים (המכונים גם
+          <ul style=""><li><br></li></ul><ul style=""><li>&nbsp;עיסוי שיכול למקד לאזורים בעייתיים ספציפיים בקשרי שרירים (המכונים גם
 "הידבקות") ושרירים ורקמות חיבור עמוקים יותר.&nbsp;</li><li>בעיות יציבה או פציעות. נכון שלחץ הרקמה העמוקה
 בדרך כלל גדול מזה של העיסוי השבדי, אך הוא לא צריך להיות כואב כדי להיות יעיל.  אם אתה חש בכאב, אנא יידע את המטפל בעיסוי
 מייד. סוג זה של עיסוי מועיל במיוחד לאנשים הסובלים מכאבים כרוניים או ממוגבלות
 מתמשכת, הגורמים לבעיות ניידות. זה יכול לטפל ביעילות בפציעות לחץ חוזרות ונשנות
 כגון מרפק טניס או תסמונת התעלה הקרפלית.
-</li></ul><p><!--[if !supportLists]-->2.      <!--[endif]-->עיסוי שוודי הוא
-סוג העיסוי הסטנדרטי הניתן ברוב המרפאות, מכוני הכושר, מכוני הספא ומרכזי הבריאות.
-מטפלים בעיסוי משתמשים בדרך כלל בקרמים או בשמנים, החל ממגוון רחב עיסוי שוודי
-מרגיע את שרירי כל הגוף, וזה שימושי במיוחד אם אתה מחלים מפציעה<br><!--[if !supportLists]-->3.      <!--[endif]-->עיסוי לומי לומי - לומי
-לומי הוא עיסוי  עיסוי פולינזי מהוואי,
-המושג לומי לומי הוא הלוך ושוב. טכניקה ייחודית המאפשרת למטפל לעסות שטח רחב בגוף
-בעת ובעונה אחת ולעבוד לכל אורך הגוף בתנועות מעגליות ונמרצות באמצעות האמות וכפות
-הידיים תוך כדי ריקוד ותנועה, עובד לעומק רקמת השריר. הטיפול גורם ממש להתעלות נפש
-כאילו התנתקת הרגשת ריחוף ושחרור. מסייע להמרצת מחזור הדם בגוף, שחרור והפגת
-מתחים.  רוצים לצאת מהמסאז' שלכם כשאתם
-מוכנים לכבוש את העולם? לכו על לומי לומי - עיסוי אקזוטי שפותח חסימות, מפורר מתחים
-ומאתגר את החושים. <br><!--[if !supportLists]-->4.   <!--[endif]--> טנטרי חלומי -המילה
+</li></ul><p style=""><!--[if !supportLists]-->2.<br><br><!--[if !supportLists]-->4.   <!--[endif]--> טנטרי חלומי -המילה
 "טנטרה" בסנסקריט פירושה "הרחבה" או "רשת",
 ומתייחסת לאוסף של טכניקות שונות המכוונות להארה ולהעלות רוחנית. טנטרה אינה דת,
 אך היא תורה רוחנית המשלבת תרגולים . גופניים, רגשיים רוחניים. עיקרי הטנטרה:✔חיבור בין
@@ -934,13 +928,13 @@
 אינה חלקית, והטנטרה היא להביטים רבים נוספים של החיים. טכניקה מינית בלבד:   הטנטרה אינה טכנית לשיפור ביצועים מיניים, אלא
 דרך חיים המעודדת צמיחה והתפתחות אישית ורוחנית. בקיצור, הטנטרה היא מסע פנימי
 להרחבת התודעה, לחיבור עמוק לעצמנו ולסביבה, ולגילוי הפוטנציאל הטמון בנו. הטנטרה
-שואפת להנות מהדרך במין ולא מתעסקת בהכרח רק בגמירה. <br><!--[if !supportLists]-->5.      <!--[endif]-->שוודי+ לומי לומי- עיסוי מדליק. ❤️ ומפנק&nbsp;</p><h3 class="index-services-card-title" >כותרת משנה</h3>
-          <p class="index-services-card-text" >טקסט כאן</p>
+שואפת להנות מהדרך במין ולא מתעסקת בהכרח רק בגמירה. <br><!--[if !supportLists]-->5.      <!--[endif]-->שוודי+ לומי לומי- עיסוי מדליק. ❤️ ומפנק&nbsp;</p><h3 class="index-services-card-title" style="cursor: text;">כותרת משנה</h3>
+          <p class="index-services-card-text" style="cursor: text;">טקסט כאן</p>
           <p><a href="#contact" class="index-services-card-link" style="color: rgb(47, 41, 37) !important;">טקסט קישור</a>
         </p></div>
-      </article><article class="index-services-card" data-grid-item-index="1" id="zappy-section-3">
+      </article><article class="index-services-card" id="zappy-section-3" data-grid-item-index="1">
         <div class="index-services-card-icon" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-element-id="zappy-temp-icon-1781580759385-pbtlb4r08">
             <circle cx="22" cy="22" r="20" stroke="#C9785C" stroke-width="1.5" opacity="0.25"></circle>
             <path d="M14 28 C14 22 18 16 22 14 C26 16 30 22 30 28" stroke="#C9785C" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
             <path d="M18 28 C18 24 20 21 22 20 C24 21 26 24 26 28" stroke="#7D8664" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
@@ -949,19 +943,23 @@
           </svg>
         </div>
         <div class="index-services-card-content">
-          <p ><span class="index-services-card-tag" style="color: rgb(47, 41, 37) !important;">לכאב ומתח</span>
-          </p><h3 class="index-services-card-title" >עיסוי טיפולי -&nbsp; לומי לומי&nbsp;</h3>
-          <p class="index-services-card-text" >
+          <p style=""><span class="index-services-card-tag" style="color: rgb(47, 41, 37) !important;">לכאב ומתח</span>
+          </p><h3 class="index-services-card-title" style="">עיסוי טיפולי -&nbsp; לומי לומי&nbsp;</h3>
+          <p class="index-services-card-text" style="">
 
  לומי לומי הוא עיסוי עיסוי פולינזי מהוואי, המושג לומי לומי הוא הלוך ושוב. טכניקה ייחודית המאפשרת למטפל לעסות שטח רחב בגוף בעת ובעונה אחת ולעבוד לכל אורך הגוף בתנועות מעגליות ונמרצות באמצעות האמות וכפות הידיים תוך כדי ריקוד ותנועה, עובד לעומק רקמת השריר. הטיפול גורם ממש להתעלות נפש כאילו התנתקת הרגשת ריחוף ושחרור. מסייע להמרצת מחזור הדם בגוף, שחרור והפגת מתחים. רוצים לצאת מהמסאז' שלכם כשאתם מוכנים לכבוש את העולם? לכו על לומי לומי - עיסוי אקזוטי שפותח חסימות, מפורר מתחים ומאתגר את החושים.
 
-מיועד לאנשים הסובלים מכאבי גב, צוואר, כתפיים או מתח שרירי כרוני. הטיפול משחרר נקודות לחץ, משפר את זרימת הדם ומחזיר את הגוף לתנועה חופשית וללא כאב.</p>
+מיועד לאנשים הסובלים מכאבי גב, צוואר, כתפיים או מתח שרירי כרוני. הטיפול משחרר נקודות לחץ, משפר את זרימת הדם ומחזיר את הגוף לתנועה חופשית וללא כאב.
+
+ עיסוי לומי לומי - לומי לומי הוא עיסוי עיסוי פולינזי מהוואי, המושג לומי לומי הוא הלוך ושוב. טכניקה ייחודית המאפשרת למטפל לעסות שטח רחב בגוף בעת ובעונה אחת ולעבוד לכל אורך הגוף בתנועות מעגליות ונמרצות באמצעות האמות וכפות הידיים תוך כדי ריקוד ותנועה, עובד לעומק רקמת השריר. הטיפול גורם ממש להתעלות נפש כאילו התנתקת הרגשת ריחוף ושחרור. מסייע להמרצת מחזור הדם בגוף, שחרור והפגת מתחים. רוצים לצאת מהמסאז' שלכם כשאתם מוכנים לכבוש את העולם? לכו על לומי לומי - עיסוי אקזוטי שפותח חסימות, מפורר מתחים ומאתגר את החושים.
+
+</p>
           <p><a href="#contact" class="index-services-card-link" style="color: rgb(47, 41, 37) !important;">לפרטים נוספים <i class="fa fa-arrow-right" style="transform: scaleX(-1); display: inline-block; pointer-events: auto; cursor: pointer;" data-element-type="icon" data-element-id="icon-1780184617860-iivyl8dbu" data-icon-type="fontawesome"></i></a>
         </p></div>
       </article>
 
       <!-- Card 2: Relaxation massage (lifted/elevated) -->
-      <article class="index-services-card index-services-card--elevated" data-grid-item-index="2" id="zappy-section-4">
+      <article class="index-services-card index-services-card--elevated" id="zappy-section-4" data-grid-item-index="2">
         <div class="index-services-card-accent-bar" aria-hidden="true"></div>
         <div class="index-services-card-icon" aria-hidden="true">
           <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -974,8 +972,8 @@
         </div>
         <div class="index-services-card-content">
           <p><span class="index-services-card-tag" style="color: rgb(47, 41, 37) !important;">להרפיה ושחרור</span>
-          </p><h3 class="index-services-card-title" >עיסוי שוודי קלאסי</h3>
-          <p class="index-services-card-text" >הדרך הטובה ביותר לאפס את מערכת העצבים ולהניח לגוף לנוח. מתאים לאנשים שחיים בלחץ יומיומי ורוצים לצאת מהטיפול רגועים, קלים וממורכזים מחדש.
+          </p><h3 class="index-services-card-title" style="">עיסוי שוודי קלאסי</h3>
+          <p class="index-services-card-text" style="">הדרך הטובה ביותר לאפס את מערכת העצבים ולהניח לגוף לנוח. מתאים לאנשים שחיים בלחץ יומיומי ורוצים לצאת מהטיפול רגועים, קלים וממורכזים מחדש.
 
 סוג העיסוי הסטנדרטי הניתן ברוב המרפאות, מכוני הכושר, מכוני הספא ומרכזי הבריאות. מטפלים בעיסוי משתמשים בדרך כלל בקרמים או בשמנים, החל ממגוון רחב עיסוי שוודי מרגיע את שרירי כל הגוף, וזה שימושי במיוחד אם אתה מחלים מפציעה
 
@@ -985,7 +983,7 @@
       </article>
 
       <!-- Card 3: Specialized / fitness recovery -->
-      <article class="index-services-card" data-grid-item-index="3" style="transform: translateX(-408px);" id="zappy-section-5">
+      <article class="index-services-card" style="transform: translateX(-408px);" id="zappy-section-5" data-grid-item-index="3">
         <div class="index-services-card-icon" aria-hidden="true">
           <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="22" cy="22" r="20" stroke="#C9785C" stroke-width="1.5" opacity="0.25"></circle>
@@ -1012,9 +1010,9 @@
           </svg>
         </div>
         <div class="index-services-card-content">
-          <p ><b>טנטרה</b></p><h3 class="index-services-card-title" >כותרת משנה</h3>
-          <p class="index-services-card-text" >&nbsp; טנטרי חלומי -המילה "טנטרה" בסנסקריט פירושה "הרחבה" או "רשת", ומתייחסת לאוסף של טכניקות שונות המכוונות להארה ולהעלות רוחנית. טנטרה אינה דת, אך היא תורה רוחנית המשלבת תרגולים . גופניים, רגשיים רוחניים. עיקרי הטנטרה:✔חיבור בין גוף לנפש: הטנטרה שמה דגש על הקשר בין הגוף והנפש, ✔ הארה והתעלות: המטרה של הטנטרה היא להגיע להארה, כלומר לעלות מעל מגבלות של התודעה המוגבלת ולהגיע לתחושת שלמות וחיבור עמוק. מודעות והקשבה פנימית: הטנטרה מעודדת מודעות לגוף, לנשימה, לרגשות ולתחושות הגוף, וכן הקשבה פנימית עמוקה. ח✔ ַקִירָה מִינִית: מיניות היא חלק מהטנטרה, אך היא אינה העיקר. הטנטרה חוקרת את המיניות בהקשר של אנרגיה, מודעות וחיבור עמוק לפרטנר. ✔ קשרים בין-אישים: הטנטרה מעודדת מודעות וחיבור עמוק במערכות יחסים, תוך שימת דגש על הקשבה, קבלה ונוכחות. ✔ הטנטרה אינה: דת: הטנטרה אינה דת, אלא תורה רוחנית ופילוסופיה. רק מיניות: בעוד שמניות חלק מהטנטרה, היא אינה חלקית, והטנטרה היא להביטים רבים נוספים של החיים. טכניקה מינית בלבד: הטנטרה אינה טכנית לשיפור ביצועים מיניים, אלא דרך חיים המעודדת צמיחה והתפתחות אישית ורוחנית. בקיצור, הטנטרה היא מסע פנימי להרחבת התודעה, לחיבור עמוק לעצמנו ולסביבה, ולגילוי הפוטנציאל הטמון בנו. הטנטרה שואפת להנות מהדרך במין ולא מתעסקת בהכרח רק בגמירה.<br>5. שוודי+ לומי לומי- עיסוי מדליק. ❤️ ומפנק&nbsp; &nbsp;</p>
-          <p >טקסט כאן</p></div>
+          <p style="cursor: text;"><b>טנטרה</b></p><h3 class="index-services-card-title" style="cursor: text;">כותרת משנה</h3>
+          <p class="index-services-card-text" style="cursor: text;">&nbsp; טנטרי חלומי -המילה "טנטרה" בסנסקריט פירושה "הרחבה" או "רשת", ומתייחסת לאוסף של טכניקות שונות המכוונות להארה ולהעלות רוחנית. טנטרה אינה דת, אך היא תורה רוחנית המשלבת תרגולים . גופניים, רגשיים רוחניים. עיקרי הטנטרה:✔חיבור בין גוף לנפש: הטנטרה שמה דגש על הקשר בין הגוף והנפש, ✔ הארה והתעלות: המטרה של הטנטרה היא להגיע להארה, כלומר לעלות מעל מגבלות של התודעה המוגבלת ולהגיע לתחושת שלמות וחיבור עמוק. מודעות והקשבה פנימית: הטנטרה מעודדת מודעות לגוף, לנשימה, לרגשות ולתחושות הגוף, וכן הקשבה פנימית עמוקה. ח✔ ַקִירָה מִינִית: מיניות היא חלק מהטנטרה, אך היא אינה העיקר. הטנטרה חוקרת את המיניות בהקשר של אנרגיה, מודעות וחיבור עמוק לפרטנר. ✔ קשרים בין-אישים: הטנטרה מעודדת מודעות וחיבור עמוק במערכות יחסים, תוך שימת דגש על הקשבה, קבלה ונוכחות. ✔ הטנטרה אינה: דת: הטנטרה אינה דת, אלא תורה רוחנית ופילוסופיה. רק מיניות: בעוד שמניות חלק מהטנטרה, היא אינה חלקית, והטנטרה היא להביטים רבים נוספים של החיים. טכניקה מינית בלבד: הטנטרה אינה טכנית לשיפור ביצועים מיניים, אלא דרך חיים המעודדת צמיחה והתפתחות אישית ורוחנית. בקיצור, הטנטרה היא מסע פנימי להרחבת התודעה, לחיבור עמוק לעצמנו ולסביבה, ולגילוי הפוטנציאל הטמון בנו. הטנטרה שואפת להנות מהדרך במין ולא מתעסקת בהכרח רק בגמירה.<br>5. שוודי+ לומי לומי- עיסוי מדליק. ❤️ ומפנק&nbsp; &nbsp;</p>
+          <p style="cursor: text;">טקסט כאן</p></div>
       </article><article class="index-services-card" style="background-color: rgb(255, 255, 255) !important; padding: 32px !important; box-sizing: border-box; grid-area: auto !important;" id="zappy-section-5-add-1780358925846-ozv2nq-add-1780358927873-s2i6ie" data-grid-item-index="5">
         <div class="index-services-card-icon" aria-hidden="true">
           <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-element-id="icon-1780358925846-luexmgv6d-add-1780358927873-s2i6ie">
@@ -1026,9 +1024,9 @@
           </svg>
         </div>
         <div class="index-services-card-content">
-          <p >טקסט כאן</p><h3 class="index-services-card-title" >כותרת משנה</h3>
-          <p class="index-services-card-text" >טקסט כאן</p>
-          <p >טקסט כאן</p></div>
+          <p style="cursor: text;">טקסט כאן</p><h3 class="index-services-card-title" style="cursor: text;">כותרת משנה</h3>
+          <p class="index-services-card-text" style="cursor: text;">טקסט כאן</p>
+          <p style="cursor: text;">טקסט כאן</p></div>
       </article>
 
     </div>
@@ -1547,7 +1545,7 @@
       <!-- Image 1 — Large, spans 2 rows -->
       <div class="gallery-hive__item gallery-hive__item--tall" role="listitem" data-grid-item-index="0">
         <div class="gallery-hive__img-wrap">
-          <img src="/assets/image-1780185439498-045mzm.webp" alt="טיפול עיסוי תאילנדי בעיצומו — ידיים מקצועיות על גבי הגוף" class="gallery-hive__img" data-placeholder="gallery-massage-treatment" data-context="Professional Thai massage treatment in progress, therapist's skilled hands on client's back, warm amber lighting, clean white linens, serene wellness studio atmosphere" data-element-type="image" data-element-id="img-1780358848197-79uuixbpq" >
+          <img src="/assets/image-1780185439498-045mzm.webp" alt="טיפול עיסוי תאילנדי בעיצומו — ידיים מקצועיות על גבי הגוף" class="gallery-hive__img" data-placeholder="gallery-massage-treatment" data-context="Professional Thai massage treatment in progress, therapist's skilled hands on client's back, warm amber lighting, clean white linens, serene wellness studio atmosphere" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780358848197-79uuixbpq" style="">
           <div class="gallery-hive__overlay" aria-hidden="true">
             <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">טיפול עיסוי תאילנדי</span>
           </div>
@@ -1557,7 +1555,7 @@
       <!-- Image 2 -->
       <div class="gallery-hive__item" role="listitem" data-grid-item-index="1" style="display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important;">
         <div class="gallery-hive__img-wrap">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-e1puszs7l" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780359565826-sspq3w.webp?v=1780359567854" alt="חדר טיפולים חם ומזמין עם תאורה עמומה ואווירה שלווה" class="gallery-hive__img" data-placeholder="gallery-treatment-room" data-context="Warm cozy massage treatment room, soft amber lighting, natural wood accents, plants, peaceful and inviting wellness space, earthy tones" data-element-type="image" data-element-id="img-1780358848197-e1puszs7l" style="object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -15.2583% !important; width: 100% !important; height: 146.237% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.8" data-zappy-original-width="376" data-zappy-original-height="297" data-zappy-object-position="50% 33%"></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-e1puszs7l" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780359565826-sspq3w.webp?v=1780359567854" alt="חדר טיפולים חם ומזמין עם תאורה עמומה ואווירה שלווה" class="gallery-hive__img" data-placeholder="gallery-treatment-room" data-context="Warm cozy massage treatment room, soft amber lighting, natural wood accents, plants, peaceful and inviting wellness space, earthy tones" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780358848197-e1puszs7l" style="object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -15.2583% !important; width: 100% !important; height: 146.237% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.8" data-zappy-original-width="376" data-zappy-original-height="297" data-zappy-object-position="50% 33%"></div>
           <div class="gallery-hive__overlay" aria-hidden="true">
             <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">חדר הטיפולים</span>
           </div>
@@ -1567,7 +1565,7 @@
       <!-- Image 3 -->
       <div class="gallery-hive__item" role="listitem" data-grid-item-index="2" style="display: flex !important; flex-direction: column !important; justify-content: flex-end !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important;">
         <div class="gallery-hive__img-wrap">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-1vmnz3vuy" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780359781466-01tbtb.webp?v=1780359784111" alt="מיטת עיסוי מקצועית עם מצעי פשתן טבעיים" class="gallery-hive__img" data-placeholder="gallery-massage-table" data-context="Professional massage table with clean natural linen sheets, folded towels, minimalist wellness studio, warm natural light, earthy beige tones" data-element-type="image" data-element-id="img-1780358848197-1vmnz3vuy" style="object-position: 87% 93% !important; margin: 0px !important; left: -1.75452% !important; top: 0% !important; width: 103.509% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.8" data-zappy-object-position="87% 93%" data-zappy-original-width="376" data-zappy-original-height="297"></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-1vmnz3vuy" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780359781466-01tbtb.webp?v=1780359784111" alt="מיטת עיסוי מקצועית עם מצעי פשתן טבעיים" class="gallery-hive__img" data-placeholder="gallery-massage-table" data-context="Professional massage table with clean natural linen sheets, folded towels, minimalist wellness studio, warm natural light, earthy beige tones" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780358848197-1vmnz3vuy" style="object-position: 87% 93% !important; margin: 0px !important; left: -1.75452% !important; top: 0% !important; width: 103.509% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.8" data-zappy-object-position="87% 93%" data-zappy-original-width="376" data-zappy-original-height="297"></div>
           <div class="gallery-hive__overlay" aria-hidden="true">
             <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">מיטת הטיפולים</span>
           </div>
@@ -1577,14 +1575,14 @@
       <!-- Image 4 — Wide, spans 2 columns -->
       <div class="gallery-hive__item" role="listitem" data-grid-item-index="3" style="display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important; grid-area: auto !important;">
         <div class="gallery-hive__img-wrap">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-1vmnz3vuy-dup-1780359698573-duthh8" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780360019157-2w8djy.webp?v=1780360021199" alt="מיטת עיסוי מקצועית עם מצעי פשתן טבעיים" class="gallery-hive__img" data-placeholder="gallery-massage-table" data-context="Professional massage table with clean natural linen sheets, folded towels, minimalist wellness studio, warm natural light, earthy beige tones" data-element-type="image" data-element-id="img-1780358848197-1vmnz3vuy-dup-1780359698573-duthh8" style="cursor: pointer; object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -11.8667% !important; width: 100% !important; height: 135.96% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.7" data-zappy-object-position="50% 33%" data-zappy-original-width="376" data-zappy-original-height="297"></div>
-          <div class="gallery-hive__overlay" aria-hidden="true" >
-            <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important; ">מיטת הטיפולים</span>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-1vmnz3vuy-dup-1780359698573-duthh8" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780360019157-2w8djy.webp?v=1780360021199" alt="מיטת עיסוי מקצועית עם מצעי פשתן טבעיים" class="gallery-hive__img" data-placeholder="gallery-massage-table" data-context="Professional massage table with clean natural linen sheets, folded towels, minimalist wellness studio, warm natural light, earthy beige tones" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780358848197-1vmnz3vuy-dup-1780359698573-duthh8" style="cursor: pointer; object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -11.8667% !important; width: 100% !important; height: 135.96% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.7" data-zappy-object-position="50% 33%" data-zappy-original-width="376" data-zappy-original-height="297"></div>
+          <div class="gallery-hive__overlay" aria-hidden="true" style="cursor: text;">
+            <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important; cursor: text;">מיטת הטיפולים</span>
           </div>
         </div>
       </div><div class="gallery-hive__item gallery-hive__item--wide" role="listitem" data-grid-item-index="4">
         <div class="gallery-hive__img-wrap">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-nifpgid00" data-element-type="image" data-zappy-zoom-wrapper-width="768px" data-zappy-zoom-wrapper-height="465px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 768px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 465px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780360177422-nl7yjb.webp?v=1780360179291" alt="שמנים אתריים ואבני בזלת מחוממות על משטח עץ" class="gallery-hive__img" data-placeholder="gallery-oils-stones" data-context="Arrangement of essential oil bottles, warm basalt massage stones, dried flowers, and natural wellness products on a wooden surface, warm earthy tones, spa aesthetic" data-element-type="image" data-element-id="img-1780358848197-nifpgid00" style="object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -31.7368% !important; width: 100% !important; height: 196.172% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.9" data-zappy-original-width="768" data-zappy-original-height="465" data-zappy-object-position="50% 33%"></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-nifpgid00" data-element-type="image" data-zappy-zoom-wrapper-width="768px" data-zappy-zoom-wrapper-height="465px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 768px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 465px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780360177422-nl7yjb.webp?v=1780360179291" alt="שמנים אתריים ואבני בזלת מחוממות על משטח עץ" class="gallery-hive__img" data-placeholder="gallery-oils-stones" data-context="Arrangement of essential oil bottles, warm basalt massage stones, dried flowers, and natural wellness products on a wooden surface, warm earthy tones, spa aesthetic" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780358848197-nifpgid00" style="object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -31.7368% !important; width: 100% !important; height: 196.172% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.9" data-zappy-original-width="768" data-zappy-original-height="465" data-zappy-object-position="50% 33%"></div>
           <div class="gallery-hive__overlay" aria-hidden="true">
             <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">שמנים ואבנים</span>
           </div>
@@ -1594,7 +1592,7 @@
       <!-- Image 5 -->
       <div class="gallery-hive__item" role="listitem" data-grid-item-index="5" style="display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important;">
         <div class="gallery-hive__img-wrap">
-          <img src="/assets/image-1780185439498-045mzm.webp" alt="תקריב של ידי המעסה בזמן עיסוי — מגע מקצועי ועדין" class="gallery-hive__img" data-placeholder="gallery-hands-closeup" data-context="Close-up of professional massage therapist hands performing therapeutic massage on client's shoulder and neck area, warm skin tones, soft focus background, expert touch" data-element-type="image" data-element-id="img-1780358848197-w1bwaa1bz" >
+          <img src="/assets/image-1780185439498-045mzm.webp" alt="תקריב של ידי המעסה בזמן עיסוי — מגע מקצועי ועדין" class="gallery-hive__img" data-placeholder="gallery-hands-closeup" data-context="Close-up of professional massage therapist hands performing therapeutic massage on client's shoulder and neck area, warm skin tones, soft focus background, expert touch" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780358848197-w1bwaa1bz" style="">
           <div class="gallery-hive__overlay" aria-hidden="true">
             <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">מגע מקצועי</span>
           </div>
@@ -1604,7 +1602,7 @@
       <!-- Image 6 -->
       <div class="gallery-hive__item" role="listitem" data-grid-item-index="6">
         <div class="gallery-hive__img-wrap">
-          <img src="/assets/image-1780185439498-045mzm.webp" alt="אווירה מרגיעה עם נרות, צמחים ירוקים ותאורה רכה" class="gallery-hive__img" data-placeholder="gallery-ambiance-candles" data-context="Relaxing spa ambiance with lit candles, green tropical plants, soft warm lighting, zen atmosphere, wellness studio corner with calming natural decor" data-element-type="image" data-element-id="img-1780358848197-7ffsofcmq" >
+          <img src="/assets/image-1780185439498-045mzm.webp" alt="אווירה מרגיעה עם נרות, צמחים ירוקים ותאורה רכה" class="gallery-hive__img" data-placeholder="gallery-ambiance-candles" data-context="Relaxing spa ambiance with lit candles, green tropical plants, soft warm lighting, zen atmosphere, wellness studio corner with calming natural decor" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780358848197-7ffsofcmq" style="">
           <div class="gallery-hive__overlay" aria-hidden="true">
             <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">אווירה מרגיעה</span>
           </div>

@@ -161,26 +161,31 @@
       // Track button clicks (counted as actions)
       if (target.tagName === 'BUTTON' || target.closest('button')) {
         var button = target.tagName === 'BUTTON' ? target : target.closest('button');
-        trackEvent('click', {
+        var clickMeta = {
           element: 'button',
           text: button.textContent.trim().substring(0, 100),
           id: button.id || null,
           class: button.className || null
-        });
+        };
+        
+        trackEvent('click', clickMeta);
       }
       
       // Track link clicks (navigation - not counted as actions)
       else if (target.tagName === 'A' || target.closest('a')) {
         var link = target.tagName === 'A' ? target : target.closest('a');
-        trackEvent('navigation', {
+        var navMeta = {
           element: 'link',
           text: link.textContent.trim().substring(0, 100),
           href: link.href,
           external: link.hostname !== window.location.hostname
-        });
+        };
+        
+        trackEvent('navigation', navMeta);
       }
     }, true);
   }
+  
   
   // Track form submissions
   if (config.trackFormSubmissions) {
@@ -886,10 +891,10 @@
     </div>
 
     <!-- 3-card grid -->
-    <div class="index-services-grid zappy-preserve-css-grid" id="zappy-auto-grid-1780184617894-0fem6u" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="384" data-original-gap="24px" style="--zappy-grid-cols: repeat(3, minmax(0, 1fr)); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
+    <div class="index-services-grid zappy-preserve-css-grid" id="zappy-auto-grid-1780184617894-0fem6u" data-zappy-auto-grid="true" data-original-item-width="384" data-original-gap="24px" style="--zappy-grid-cols: repeat(3, minmax(0, 1fr)); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
 
       <!-- Card 1: Therapeutic massage -->
-      <article class="index-services-card" style="background-color: rgb(255, 255, 255) !important; padding: 32px !important; box-sizing: border-box; grid-area: auto !important;" data-grid-item-index="0" id="zappy-section-2">
+      <article class="index-services-card" style="background-color: rgb(255, 255, 255) !important; padding: 32px !important; box-sizing: border-box; grid-area: auto !important;" id="zappy-section-2" data-grid-item-index="0">
         <div class="index-services-card-icon" aria-hidden="true">
           <svg data-element-type="icon" data-icon-type="svg" width="48" height="48" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-element-id="icon-1780184661979-ciuhwnrhs" style="width: 48px !important; height: 48px !important; color: rgb(47, 41, 37);" data-size-adjusted="true">
             <circle cx="22" cy="22" r="20" stroke="#C9785C" stroke-width="1.5" opacity="0.25"></circle>
@@ -906,18 +911,7 @@
 מייד. סוג זה של עיסוי מועיל במיוחד לאנשים הסובלים מכאבים כרוניים או ממוגבלות
 מתמשכת, הגורמים לבעיות ניידות. זה יכול לטפל ביעילות בפציעות לחץ חוזרות ונשנות
 כגון מרפק טניס או תסמונת התעלה הקרפלית.
-</li></ul><p><!--[if !supportLists]-->2.      <!--[endif]-->עיסוי שוודי הוא
-סוג העיסוי הסטנדרטי הניתן ברוב המרפאות, מכוני הכושר, מכוני הספא ומרכזי הבריאות.
-מטפלים בעיסוי משתמשים בדרך כלל בקרמים או בשמנים, החל ממגוון רחב עיסוי שוודי
-מרגיע את שרירי כל הגוף, וזה שימושי במיוחד אם אתה מחלים מפציעה<br><!--[if !supportLists]-->3.      <!--[endif]-->עיסוי לומי לומי - לומי
-לומי הוא עיסוי  עיסוי פולינזי מהוואי,
-המושג לומי לומי הוא הלוך ושוב. טכניקה ייחודית המאפשרת למטפל לעסות שטח רחב בגוף
-בעת ובעונה אחת ולעבוד לכל אורך הגוף בתנועות מעגליות ונמרצות באמצעות האמות וכפות
-הידיים תוך כדי ריקוד ותנועה, עובד לעומק רקמת השריר. הטיפול גורם ממש להתעלות נפש
-כאילו התנתקת הרגשת ריחוף ושחרור. מסייע להמרצת מחזור הדם בגוף, שחרור והפגת
-מתחים.  רוצים לצאת מהמסאז' שלכם כשאתם
-מוכנים לכבוש את העולם? לכו על לומי לומי - עיסוי אקזוטי שפותח חסימות, מפורר מתחים
-ומאתגר את החושים. <br><!--[if !supportLists]-->4.   <!--[endif]--> טנטרי חלומי -המילה
+</li></ul><p ><!--[if !supportLists]-->2.<br><br><!--[if !supportLists]-->4.   <!--[endif]--> טנטרי חלומי -המילה
 "טנטרה" בסנסקריט פירושה "הרחבה" או "רשת",
 ומתייחסת לאוסף של טכניקות שונות המכוונות להארה ולהעלות רוחנית. טנטרה אינה דת,
 אך היא תורה רוחנית המשלבת תרגולים . גופניים, רגשיים רוחניים. עיקרי הטנטרה:✔חיבור בין
@@ -938,9 +932,9 @@
           <p class="index-services-card-text" >טקסט כאן</p>
           <p><a href="#contact" class="index-services-card-link" style="color: rgb(47, 41, 37) !important;">טקסט קישור</a>
         </p></div>
-      </article><article class="index-services-card" data-grid-item-index="1" id="zappy-section-3">
+      </article><article class="index-services-card" id="zappy-section-3" data-grid-item-index="1">
         <div class="index-services-card-icon" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-element-id="zappy-temp-icon-1781580759385-pbtlb4r08">
             <circle cx="22" cy="22" r="20" stroke="#C9785C" stroke-width="1.5" opacity="0.25"></circle>
             <path d="M14 28 C14 22 18 16 22 14 C26 16 30 22 30 28" stroke="#C9785C" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
             <path d="M18 28 C18 24 20 21 22 20 C24 21 26 24 26 28" stroke="#7D8664" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
@@ -955,13 +949,17 @@
 
  לומי לומי הוא עיסוי עיסוי פולינזי מהוואי, המושג לומי לומי הוא הלוך ושוב. טכניקה ייחודית המאפשרת למטפל לעסות שטח רחב בגוף בעת ובעונה אחת ולעבוד לכל אורך הגוף בתנועות מעגליות ונמרצות באמצעות האמות וכפות הידיים תוך כדי ריקוד ותנועה, עובד לעומק רקמת השריר. הטיפול גורם ממש להתעלות נפש כאילו התנתקת הרגשת ריחוף ושחרור. מסייע להמרצת מחזור הדם בגוף, שחרור והפגת מתחים. רוצים לצאת מהמסאז' שלכם כשאתם מוכנים לכבוש את העולם? לכו על לומי לומי - עיסוי אקזוטי שפותח חסימות, מפורר מתחים ומאתגר את החושים.
 
-מיועד לאנשים הסובלים מכאבי גב, צוואר, כתפיים או מתח שרירי כרוני. הטיפול משחרר נקודות לחץ, משפר את זרימת הדם ומחזיר את הגוף לתנועה חופשית וללא כאב.</p>
+מיועד לאנשים הסובלים מכאבי גב, צוואר, כתפיים או מתח שרירי כרוני. הטיפול משחרר נקודות לחץ, משפר את זרימת הדם ומחזיר את הגוף לתנועה חופשית וללא כאב.
+
+ עיסוי לומי לומי - לומי לומי הוא עיסוי עיסוי פולינזי מהוואי, המושג לומי לומי הוא הלוך ושוב. טכניקה ייחודית המאפשרת למטפל לעסות שטח רחב בגוף בעת ובעונה אחת ולעבוד לכל אורך הגוף בתנועות מעגליות ונמרצות באמצעות האמות וכפות הידיים תוך כדי ריקוד ותנועה, עובד לעומק רקמת השריר. הטיפול גורם ממש להתעלות נפש כאילו התנתקת הרגשת ריחוף ושחרור. מסייע להמרצת מחזור הדם בגוף, שחרור והפגת מתחים. רוצים לצאת מהמסאז' שלכם כשאתם מוכנים לכבוש את העולם? לכו על לומי לומי - עיסוי אקזוטי שפותח חסימות, מפורר מתחים ומאתגר את החושים.
+
+</p>
           <p><a href="#contact" class="index-services-card-link" style="color: rgb(47, 41, 37) !important;">לפרטים נוספים <i class="fa fa-arrow-right" style="transform: scaleX(-1); display: inline-block; pointer-events: auto; cursor: pointer;" data-element-type="icon" data-element-id="icon-1780184617860-iivyl8dbu" data-icon-type="fontawesome"></i></a>
         </p></div>
       </article>
 
       <!-- Card 2: Relaxation massage (lifted/elevated) -->
-      <article class="index-services-card index-services-card--elevated" data-grid-item-index="2" id="zappy-section-4">
+      <article class="index-services-card index-services-card--elevated" id="zappy-section-4" data-grid-item-index="2">
         <div class="index-services-card-accent-bar" aria-hidden="true"></div>
         <div class="index-services-card-icon" aria-hidden="true">
           <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -985,7 +983,7 @@
       </article>
 
       <!-- Card 3: Specialized / fitness recovery -->
-      <article class="index-services-card" data-grid-item-index="3" style="transform: translateX(-408px);" id="zappy-section-5">
+      <article class="index-services-card" style="transform: translateX(-408px);" id="zappy-section-5" data-grid-item-index="3">
         <div class="index-services-card-icon" aria-hidden="true">
           <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="22" cy="22" r="20" stroke="#C9785C" stroke-width="1.5" opacity="0.25"></circle>
