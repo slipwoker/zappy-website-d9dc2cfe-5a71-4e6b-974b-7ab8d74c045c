@@ -31,7 +31,7 @@ Information about WCAG compliance and accessibility features.
 - Email: yossef2411@outlook.com
 - Phone: +972526842282
 - Phone (tel): tel:+972526842282
-- Address: כביר 34 תל אביב יפו , תל אביב יפו , מרכז , ישראל 
+- Address: פלוגות 16 , תל אביב יפו , מרכז , 6763986, ישראל
 
 ### Contact form
 - URL: https://example.com
