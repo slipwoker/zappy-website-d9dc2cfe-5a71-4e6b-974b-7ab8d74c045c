@@ -7,21 +7,21 @@
 ## Pages
 
 ### בית
-https://example.com
+https://yossi-chai-levy-massage-and-pe.zappy5.app
 A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic tre
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://yossi-chai-levy-massage-and-pe.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://yossi-chai-levy-massage-and-pe.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://yossi-chai-levy-massage-and-pe.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -34,8 +34,8 @@ Information about WCAG compliance and accessibility features.
 - Address: פלוגות 16 , תל אביב יפו , מרכז , 6763986, ישראל
 
 ### Contact form
-- URL: https://example.com
-- Endpoint: https://example.com/api/email/contact-form
+- URL: https://yossi-chai-levy-massage-and-pe.zappy5.app
+- Endpoint: https://yossi-chai-levy-massage-and-pe.zappy5.app/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -65,6 +65,6 @@ Massage & Wellness
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://example.com/sitemap.xml
-- Robots: https://example.com/robots.txt
-- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Sitemap (XML): https://yossi-chai-levy-massage-and-pe.zappy5.app/sitemap.xml
+- Robots: https://yossi-chai-levy-massage-and-pe.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://yossi-chai-levy-massage-and-pe.zappy5.app/llms-full.txt

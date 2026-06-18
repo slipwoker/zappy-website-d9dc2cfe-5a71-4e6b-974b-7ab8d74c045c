@@ -2,13 +2,13 @@
 
 A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.
 
-Source: https://example.com
+Source: https://yossi-chai-levy-massage-and-pe.zappy5.app
 
 ---
 
 ## the hive thai massage &amp; wellness — יוסי חי לוי מעסה מוסמך ומ
 
-URL: https://example.com
+URL: https://yossi-chai-levy-massage-and-pe.zappy5.app
 Description: A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic tre
 
 the hive thai massage & wellness — יוסי חי לוי מעסה מוסמך ומ
@@ -1174,7 +1174,7 @@ The Hive Thai Massage & Wellness
 
 ## מדיניות פרטיות
 
-URL: https://example.com/privacy
+URL: https://yossi-chai-levy-massage-and-pe.zappy5.app/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -1448,7 +1448,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://example.com/accessibility
+URL: https://yossi-chai-levy-massage-and-pe.zappy5.app/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -1731,7 +1731,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://example.com/terms
+URL: https://yossi-chai-levy-massage-and-pe.zappy5.app/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
