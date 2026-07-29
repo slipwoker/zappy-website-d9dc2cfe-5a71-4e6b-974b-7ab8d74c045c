@@ -174,6 +174,7 @@ Description: A massage therapy business seeking a landing page to attract client
 
 
 
+
 מה אני מציע
 
 ## השירותים שלי
@@ -205,8 +206,6 @@ Description: A massage therapy business seeking a landing page to attract client
 
 
 
-
-
 ### ייעוץ תזונה ותוכנית תזונה
 
 
@@ -218,6 +217,17 @@ Description: A massage therapy business seeking a landing page to attract client
 
 
 
+
+
+
+
+### ייעוץ תזונה ותוכנית תזונה
+
+
+תוכנית תזונה מותאמת אישית לפי מבנה גוף, מטרות והעדפות. כולל מעקב שבועי, התאמות ותמיכה בוואטסאפ. בלי דיאטות קיצוניות – רק שינוי אמיתי בהרגלים.
+
+
+לפרטים
 
 
 
@@ -239,8 +249,6 @@ Description: A massage therapy business seeking a landing page to attract client
 
 
 
-
-
 ### תוכנית אונליין
 
 
@@ -252,14 +260,10 @@ Description: A massage therapy business seeking a landing page to attract client
 
 
 
-
-
 לא בטוח מה מתאים לך? בוא נדבר.
 
 
 צור קשר עכשיו
-
-
 
 
 
