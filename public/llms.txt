@@ -1,4 +1,4 @@
-# יוסי חי לוי מעסה מוסמך ומאמן כושר אישי — Generative Engine Optimization Map
+# יוסי חי לוי – אימונים אישיים וייעוץ בתזונה — Generative Engine Optimization Map
 
 > A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.
 
@@ -29,27 +29,15 @@ Information about WCAG compliance and accessibility features.
 ## How to Contact Us
 
 - Email: yossef2411@outlook.com
-- Phone: +972526842282
-- Phone (tel): tel:+972526842282
+- Phone: 052-6842282
+- Phone (tel): tel:0526842282
 - Address: פלוגות 16 , תל אביב יפו , מרכז , 6763986, ישראל
-
-### Contact form
-- URL: https://yossilevi-musmach.co.il
-- Endpoint: https://yossilevi-musmach.co.il/api/email/contact-form
-- Method: POST
-- Content-Type: application/json
-- Fields:
-  - `name` (text, required)
-  - `email` (email, required)
-  - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox, required)
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About יוסי חי לוי מעסה מוסמך ומאמן כושר אישי
+## About יוסי חי לוי – אימונים אישיים וייעוץ בתזונה
 A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.
 
 ## Target Audience

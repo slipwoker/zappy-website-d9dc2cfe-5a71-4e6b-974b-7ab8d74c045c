@@ -70,16 +70,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Assistant:wght@300;400;500;600;700&display=swap');
 
 :root {
---primary: #C9785C;
-  --secondary: #7D8664;
-  --accent: #90A9B7;
-  --bg-light: #FFFFFF;
-  --bg-dark: #2F2925;
-  --text-dark: #4A4A4A;
-  --text-light: #F3EBDD;
-  --text-muted: #707070;
-  --border-light: #9a9185;
-  --border-dark: #8d837c;
+--primary: #E63946;
+  --secondary: #F4A261;
+  --accent: #E63946;
+  --bg-light: #0D0D0D;
+  --bg-dark: #1A1A1A;
+  --text-dark: #FFFFFF;
+  --text-light: #FFFFFF;
+  --text-muted: #B0B0B0;
+  --border-light: #666666;
+  --border-dark: #777777;
   --nav-bg: #F3EBDD;
   --nav-text: #2F2925;
   --nav-text-hover: #C9785C;
@@ -102,21 +102,21 @@
   --transition-default: all 0.25s ease;
   --transition-hover: all 0.2s ease;
 
-  --gradient-primary: linear-gradient(135deg, #C06242 0%, #CB7E63 100%);
+  --gradient-primary: linear-gradient(135deg, #E01C2B 0%, #E7414D 100%);
   --gradient-gold-shine: linear-gradient(135deg, #C8A87A 0%, #E8C89A 50%, #C8A87A 100%);
-  --gradient-secondary: linear-gradient(135deg, #868F6B 0%, #88A2B1 100%);
+  --gradient-secondary: linear-gradient(135deg, #F5AB70 0%, #E42D3A 100%);
   --gradient-gold-accent: linear-gradient(90deg, #C8A87A 0%, #D4B88A 100%);
   --gradient-dark-section: linear-gradient(180deg, #4A3526 0%, #3D2B1F 100%);
   --gradient-overlay-dark: linear-gradient(to bottom, rgba(60,35,15,0.5) 0%, rgba(60,35,15,0.7) 100%);
   --gradient-light-section: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);
   --gradient-overlay-light: linear-gradient(to bottom, rgba(250,247,242,0.85) 0%, rgba(250,247,242,0.95) 100%);
-  --primary-color: #C9785C;
-  --secondary-color: #7D8664;
-  --accent-color: #90A9B7;
-  --background-color: #FFFFFF;
-  --surface-color: #F9FAFB;
-  --text-color: #4A4A4A;
-  --text-secondary-color: #707070;
+  --primary-color: #E63946;
+  --secondary-color: #F4A261;
+  --accent-color: #E63946;
+  --background-color: #0D0D0D;
+  --surface-color: #1E1E1E;
+  --text-color: #FFFFFF;
+  --text-secondary-color: #B0B0B0;
 }
 
 *,
@@ -287,7 +287,7 @@ select{
   border-radius: var(--radius-input);
   border: 1px solid var(--border-light);
   padding: 12px 16px;
-  background-color: #FFFFFF;
+  background-color: #0D0D0D;
   color: var(--text-dark);
   transition: var(--transition-default);
   width: 100%;
@@ -382,7 +382,7 @@ blockquote {
 
 .btn-primary:hover {
   color: #fff;
-  background: linear-gradient(135deg, #B1593A 0%, #C56D4E 100%);
+  background: linear-gradient(135deg, #CB1A27 0%, #E42937 100%);
 }
 
 .btn-secondary {
@@ -393,7 +393,7 @@ blockquote {
 
 .btn-secondary:hover {
   color: #fff;
-  background: linear-gradient(135deg, #767F5E 0%, #949D7C 100%);
+  background: linear-gradient(135deg, #F39B55 0%, #F7BC8D 100%);
 }
 
 .btn-outline {
@@ -705,16 +705,16 @@ html:not([dir]) .whatsapp-float {
   --nav-bg: #F3EBDD;
   --nav-text: #2F2925;
   --nav-text-hover: #C9785C;
-  --primary: #C9785C;
-  --secondary: #7D8664;
-  --accent: #90A9B7;
-  --bg-light: #FFFFFF;
-  --bg-dark: #2F2925;
-  --text-dark: #4A4A4A;
-  --text-light: #F3EBDD;
-  --text-muted: #707070;
-  --border-light: #9a9185;
-  --border-dark: #8d837c;
+  --primary: #E63946;
+  --secondary: #F4A261;
+  --accent: #E63946;
+  --bg-light: #0D0D0D;
+  --bg-dark: #1A1A1A;
+  --text-dark: #FFFFFF;
+  --text-light: #FFFFFF;
+  --text-muted: #B0B0B0;
+  --border-light: #666666;
+  --border-dark: #777777;
 }
 
 .navbar {
@@ -843,7 +843,7 @@ html:not([dir]) .whatsapp-float {
 }
 
 .nav-cta-btn:hover {
-  background-color: #C9785C;
+  background-color: #E63946;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-1px);
   color: var(--text-light);
@@ -963,16 +963,16 @@ html:not([dir]) .whatsapp-float {
   --nav-bg: #F3EBDD;
   --nav-text: #2F2925;
   --nav-text-hover: #C9785C;
-  --primary: #C9785C;
-  --secondary: #7D8664;
-  --accent: #90A9B7;
-  --bg-light: #FFFFFF;
-  --bg-dark: #2F2925;
-  --text-dark: #4A4A4A;
-  --text-light: #F3EBDD;
-  --text-muted: #707070;
-  --border-light: #9a9185;
-  --border-dark: #8d837c;
+  --primary: #E63946;
+  --secondary: #F4A261;
+  --accent: #E63946;
+  --bg-light: #0D0D0D;
+  --bg-dark: #1A1A1A;
+  --text-dark: #FFFFFF;
+  --text-light: #FFFFFF;
+  --text-muted: #B0B0B0;
+  --border-light: #666666;
+  --border-dark: #777777;
 }
 
 .navbar {
@@ -1101,7 +1101,7 @@ html:not([dir]) .whatsapp-float {
 }
 
 .nav-cta-btn:hover {
-  background-color: #C9785C;
+  background-color: #E63946;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-1px);
   color: var(--text-light);
@@ -1287,7 +1287,7 @@ html:not([dir]) .whatsapp-float {
 .navbar a:focus-visible,
 .navbar button:focus-visible,
 .nav-menu a:focus-visible {
-  outline: 2px solid var(--primary-color, var(--primary, #C9785C));
+  outline: 2px solid var(--primary-color, var(--primary, #E63946));
   outline-offset: 2px;
 }
 
@@ -2155,14 +2155,14 @@ main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !importa
 
 /* Footer Styles */
 .site-footer {
-  --primary: #C9785C;
-  --secondary: #7D8664;
-  --accent: #90A9B7;
-  --bg-dark: #2F2925;
+  --primary: #E63946;
+  --secondary: #F4A261;
+  --accent: #E63946;
+  --bg-dark: #1A1A1A;
   --bg-deeper: #231f1b;
-  --text-light: #F3EBDD;
+  --text-light: #FFFFFF;
   --text-muted-footer: rgba(243, 235, 221, 0.65);
-  --border-dark: #8d837c;
+  --border-dark: #777777;
   --border-accent: rgba(201, 120, 92, 0.4);
   background-color: var(--bg-dark);
   color: var(--text-light);
@@ -2230,7 +2230,7 @@ main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !importa
   gap: 0.5rem;
   background: rgba(201, 120, 92, 0.15);
   border: 1.5px solid var(--border-accent);
-  color: #b65b3c;
+  color: #E63946;
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.4rem 0.9rem;
@@ -2329,7 +2329,7 @@ main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !importa
   background: rgba(201, 120, 92, 0.12);
   border: 1.5px solid var(--border-accent);
   border-radius: 8px;
-  color: #b65b3c;
+  color: #E63946;
   font-size: 0.8rem;
   margin-top: 0.05rem;
   transition: all 0.2s ease;
@@ -2379,7 +2379,7 @@ main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !importa
 }
 
 .footer-hours-title i {
-  color: #b65b3c;
+  color: #E63946;
 }
 
 .hours-list {
@@ -2410,7 +2410,7 @@ main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !importa
 }
 
 .hours-list .time.closed {
-  color: #b65b3c;
+  color: #E63946;
   font-weight: 600;
 }
 
@@ -2496,7 +2496,7 @@ main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !importa
   padding: 0.75rem 1rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #b65b3c;
+  color: #E63946;
   line-height: 1.4;
 }
 
@@ -2611,7 +2611,7 @@ main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !importa
 
 
 /* V2 Decorative Helpers — quote marks */
-:root { --decorative-quote-color: var(--accent, #C9785C); --decorative-quote-font: var(--accent-font, var(--font-display, serif)); }
+:root { --decorative-quote-color: var(--accent, #E63946); --decorative-quote-font: var(--accent-font, var(--font-display, serif)); }
 blockquote::before, .quote::before, [data-quote]::before {
   content: "\201C";
   font-family: var(--decorative-quote-font);
@@ -2642,7 +2642,7 @@ hr.section-flourish, .section-flourish, [data-section-divider] {
   height: 2px;
   margin: 1.25rem auto;
   border: 0;
-  background: linear-gradient(90deg, transparent, var(--accent, var(--primary, #C3694A)) 30%, var(--accent, var(--primary, #C3694A)) 70%, transparent);
+  background: linear-gradient(90deg, transparent, var(--accent, var(--primary, #E32432)) 30%, var(--accent, var(--primary, #E32432)) 70%, transparent);
   border-radius: 999px;
   opacity: 0.85;
 }
@@ -2865,7 +2865,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-btn-primary:hover {
-  background: #C9785C;
+  background: #E63946;
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(200, 103, 58, 0.35);
 }
@@ -3075,7 +3075,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 /* Card base */
 .index-services-section .index-services-card {
   position: relative;
-  background: #FFFFFF;
+  background: #0D0D0D;
   border-radius: 16px;
   border: 1px solid var(--border-light);
   padding: 32px;
@@ -3108,7 +3108,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   inset-inline-start: 0;
   inset-inline-end: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary) 0%, #CB7E63 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, #E7414D 100%);
   border-radius: 16px 16px 0 0;
 }
 
@@ -3180,7 +3180,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-services-section .index-services-card-link:hover {
-  color: #ae583a;
+  color: #db1c2a;
   border-bottom-color: var(--primary);
   gap: 10px;
 }
@@ -3210,7 +3210,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-services-section .index-services-btn:hover {
-  background: #C9785C;
+  background: #E63946;
   box-shadow: 0 12px 40px rgba(201, 120, 92, 0.38);
   transform: translateY(-2px);
 }
@@ -3372,7 +3372,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: #FFFFFF;
+  background: #0D0D0D;
   border: 1px solid var(--border-light);
   box-shadow: 0 4px 16px rgba(80, 50, 30, 0.07);
   display: flex;
@@ -3603,7 +3603,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 /* Main rounded content block */
 .index-about-section .index-about-block {
-  background: #FFFFFF;
+  background: #0D0D0D;
   border-radius: 24px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
   border: 1px solid var(--border-light);
@@ -3899,7 +3899,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 /* ── Cards ── */
 .index-testimonials-section .index-testimonials-card {
-  background: #FFFFFF;
+  background: #0D0D0D;
   border-radius: 16px;
   border: 1px solid var(--border-light);
   padding: 32px;
@@ -4419,7 +4419,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-contact-section .btn-phone:hover {
-  background: #C9785C;
+  background: #E63946;
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
   transform: translateY(-2px);
 }
@@ -4443,7 +4443,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-contact-section .contact-form-card {
   position: relative;
-  background: #FFFFFF;
+  background: #0D0D0D;
   border-radius: 16px;
   padding: 40px 36px;
   border: 1px solid var(--border-light);
@@ -4534,7 +4534,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-contact-section .form-input:focus {
   border-color: var(--primary);
-  background: #FFFFFF;
+  background: #0D0D0D;
   box-shadow: 0 0 0 3px rgba(201,120,92,0.12), inset 0 2px 8px rgba(80,50,30,0.04);
 }
 
@@ -4581,7 +4581,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-contact-section .privacy-consent-label a:hover {
-  color: #9f5035;
+  color: #d21a28;
 }
 
 /* Submit button */
@@ -4603,7 +4603,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-contact-section .form-submit:hover {
-  background: #C9785C;
+  background: #E63946;
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
   transform: translateY(-2px);
 }
@@ -5032,11 +5032,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   --cc-modal-bg: #ffffff;
   --cc-primary-color: #1f2937;
   --cc-secondary-color: #4b5563;
-  --cc-btn-primary-bg: #C9785C;
+  --cc-btn-primary-bg: #E63946;
   --cc-btn-primary-color: #ffffff;
-  --cc-btn-primary-border: #C9785C;
-  --cc-btn-primary-hover-bg: #C9785C;
-  --cc-btn-primary-hover-border: #C9785C;
+  --cc-btn-primary-border: #E63946;
+  --cc-btn-primary-hover-bg: #E63946;
+  --cc-btn-primary-hover-border: #E63946;
   --cc-btn-primary-hover-color: #ffffff;
   /* --cc-btn-secondary-* are used by BOTH the bar's "Customize" link and
    * the preferences modal's "Accept Necessary" / "Save Preferences" pills.
@@ -5050,7 +5050,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   --cc-btn-secondary-hover-bg: #e5e7eb;
   --cc-btn-secondary-hover-color: #111827;
   --cc-btn-secondary-hover-border: #d1d5db;
-  --cc-toggle-on-bg: #C9785C;
+  --cc-toggle-on-bg: #E63946;
 }
 
 #cc-main,
@@ -5163,7 +5163,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
  * defaults for the preferences modal's two secondary pills). */
 #zappy-cookie-banner .zappy-cookie-banner__button--customize {
   background-color: transparent !important;
-  color: #b65b3c !important;
+  color: #E63946 !important;
   border: none !important;
   padding: 0 8px !important;
   height: 32px !important;
@@ -5173,7 +5173,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 #zappy-cookie-banner .zappy-cookie-banner__button--customize:hover {
-  color: #b65b3c !important;
+  color: #E63946 !important;
   background-color: transparent !important;
 }
 
@@ -5612,7 +5612,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .pricing-hive__eyebrow {
   display: inline-block;
   background: linear-gradient(135deg, rgba(201, 120, 92, 0.15) 0%, rgba(212, 132, 90, 0.12) 100%);
-  color: var(--primary, #C9785C);
+  color: var(--primary, #E63946);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -5634,7 +5634,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 .pricing-hive__subtitle {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: #b65b3c;
+  color: #E63946;
   max-width: 580px;
   margin: 0 auto;
   line-height: 1.7;
@@ -5651,7 +5651,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 /* ---- Card Base ---- */
 .pricing-hive__card {
-  background: #FFFFFF;
+  background: #0D0D0D;
   border: 1px solid rgba(201, 120, 92, 0.2);
   border-radius: 20px;
   padding: 32px 26px 28px;
@@ -5683,7 +5683,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 /* ---- Featured Card ---- */
 .pricing-hive__card--featured {
-  background: var(--gradient-primary, linear-gradient(135deg, #C06242 0%, #CB7E63 100%));
+  background: var(--gradient-primary, linear-gradient(135deg, #E01C2B 0%, #E7414D 100%));
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 12px 40px rgba(200, 103, 58, 0.38), 0 4px 12px rgba(0,0,0,0.1);
   transform: translateY(-8px) scale(1.02);
@@ -5741,7 +5741,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 .pricing-hive__card-desc {
   font-size: 0.88rem;
-  color: #727a5b;
+  color: #F4A261;
   line-height: 1.65;
   margin: 0;
 }
@@ -5770,7 +5770,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   gap: 6px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #b65b3c;
+  color: #E63946;
   background: rgba(201, 120, 92, 0.1);
   padding: 5px 12px;
   border-radius: 50px;
@@ -5799,7 +5799,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .pricing-hive__price-amount {
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--primary, #C9785C);
+  color: var(--primary, #E63946);
   letter-spacing: -0.03em;
   line-height: 1;
 }
@@ -5820,15 +5820,15 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   letter-spacing: 0.02em;
   transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
   background: rgba(201, 120, 92, 0.1);
-  color: var(--primary, #C9785C);
+  color: var(--primary, #E63946);
   border: 2px solid rgba(201, 120, 92, 0.35);
 }
 
 .pricing-hive__cta:hover,
 .pricing-hive__cta:focus-visible {
-  background: var(--primary, #C9785C);
+  background: var(--primary, #E63946);
   color: #ffffff;
-  border-color: var(--primary, #C9785C);
+  border-color: var(--primary, #E63946);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(201, 120, 92, 0.35);
   outline: none;
@@ -5841,15 +5841,15 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 /* Featured CTA */
 .pricing-hive__cta--featured {
-  background: #FFFFFF;
-  color: #b65b3c;
+  background: #0D0D0D;
+  color: #E63946;
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .pricing-hive__cta--featured:hover,
 .pricing-hive__cta--featured:focus-visible {
   background: rgba(255, 255, 255, 0.88);
-  color: #b65b3c;
+  color: #E63946;
   border-color: #ffffff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
@@ -5863,7 +5863,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   text-align: center;
   margin-top: 48px;
   font-size: 0.9rem;
-  color: #727a5b;
+  color: #F4A261;
   line-height: 1.6;
   background: rgba(201, 120, 92, 0.07);
   border: 1px solid rgba(201, 120, 92, 0.15);
@@ -5878,12 +5878,12 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
-  color: var(--primary, #C9785C);
+  color: var(--primary, #E63946);
   margin-top: 2px;
 }
 
 .pricing-hive__note-link {
-  color: var(--primary, #C9785C);
+  color: var(--primary, #E63946);
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: rgba(201, 120, 92, 0.4);
@@ -5892,8 +5892,8 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .pricing-hive__note-link:hover {
-  color: #b65b3c;
-  text-decoration-color: #C9785C;
+  color: #E63946;
+  text-decoration-color: #E63946;
 }
 
 /* =========================================
@@ -6031,7 +6031,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 .faq-wellness-subtitle {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: #b65b3c;
+  color: #E63946;
   margin: 0 0 28px 0;
   font-weight: 400;
   line-height: 1.5;
@@ -6040,7 +6040,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .faq-wellness-divider {
   width: 60px;
   height: 4px;
-  background: var(--gradient-primary, linear-gradient(135deg, #C06242 0%, #CB7E63 100%));
+  background: var(--gradient-primary, linear-gradient(135deg, #E01C2B 0%, #E7414D 100%));
   border-radius: 2px;
   margin: 0 auto;
 }
@@ -6054,7 +6054,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 /* ---- FAQ Item Card ---- */
 .faq-wellness-item {
-  background: #FFFFFF;
+  background: #0D0D0D;
   border: 1px solid rgba(201, 120, 92, 0.28);
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(201, 120, 92, 0.08), 0 1px 3px rgba(0,0,0,0.04);
@@ -6095,7 +6095,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .faq-wellness-question:focus-visible {
-  outline: 3px solid var(--primary, #C9785C);
+  outline: 3px solid var(--primary, #E63946);
   outline-offset: -3px;
   border-radius: 14px;
 }
@@ -6122,13 +6122,13 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   height: 36px;
   border-radius: 50%;
   background: rgba(201, 120, 92, 0.1);
-  color: var(--primary, #C9785C);
+  color: var(--primary, #E63946);
   transition: transform 0.35s ease, background 0.25s ease;
 }
 
 .faq-wellness-item.active .faq-wellness-chevron {
   transform: rotate(180deg);
-  background: var(--primary, #C9785C);
+  background: var(--primary, #E63946);
   color: #ffffff;
 }
 
@@ -6149,14 +6149,14 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 /* ---- Answer Inner ---- */
 .faq-wellness-answer-inner {
-  border-right: 3px solid var(--primary, #C9785C);
+  border-right: 3px solid var(--primary, #E63946);
   padding-right: 16px;
   padding-top: 4px;
 }
 
 .faq-wellness-answer-inner p {
   font-size: clamp(0.93rem, 2vw, 1rem);
-  color: #b65b3c;
+  color: #E63946;
   line-height: 1.8;
   margin: 0;
 }
@@ -6178,14 +6178,14 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 .faq-wellness-cta-text {
   font-size: 1.1rem;
-  color: #b65b3c;
+  color: #E63946;
   font-weight: 500;
   margin: 0;
 }
 
 .faq-wellness-cta-btn {
   display: inline-block;
-  background: var(--gradient-primary, linear-gradient(135deg, #C06242 0%, #CB7E63 100%));
+  background: var(--gradient-primary, linear-gradient(135deg, #E01C2B 0%, #E7414D 100%));
   color: #ffffff;
   font-family: system-ui, sans-serif;
   font-size: 1.05rem;
@@ -6205,7 +6205,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .faq-wellness-cta-btn:focus-visible {
-  outline: 3px solid var(--primary, #C9785C);
+  outline: 3px solid var(--primary, #E63946);
   outline-offset: 3px;
 }
 
@@ -6324,7 +6324,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .gallery-hive__tag {
   display: inline-block;
   background: rgba(201, 120, 92, 0.15);
-  color: #b65b3c;
+  color: #E63946;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -6346,7 +6346,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 .gallery-hive__subtitle {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: #b65b3c;
+  color: #E63946;
   max-width: 560px;
   margin: 0 auto 28px auto;
   line-height: 1.7;
@@ -6356,7 +6356,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .gallery-hive__divider {
   width: 56px;
   height: 3px;
-  background: var(--gradient-primary, linear-gradient(135deg, #C06242 0%, #CB7E63 100%));
+  background: var(--gradient-primary, linear-gradient(135deg, #E01C2B 0%, #E7414D 100%));
   border-radius: 2px;
   margin: 0 auto;
 }
@@ -6395,7 +6395,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .gallery-hive__item:focus-within {
-  outline: 3px solid var(--primary, #C9785C);
+  outline: 3px solid var(--primary, #E63946);
   outline-offset: 3px;
 }
 
@@ -6461,7 +6461,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--gradient-primary, linear-gradient(135deg, #C06242 0%, #CB7E63 100%));
+  background: var(--gradient-primary, linear-gradient(135deg, #E01C2B 0%, #E7414D 100%));
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 700;
@@ -6480,7 +6480,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .gallery-hive__cta:focus-visible {
-  outline: 3px solid #C9785C;
+  outline: 3px solid #E63946;
   outline-offset: 4px;
 }
 
@@ -6657,7 +6657,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   padding: 7px 20px;
   font-size: 13px;
   font-weight: 500;
-  color: #597788;
+  color: #F4A261;
   letter-spacing: 0.03em;
   margin-bottom: 28px;
   direction: ltr;
@@ -6668,7 +6668,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--primary, #C9785C);
+  background: var(--primary, #E63946);
   box-shadow: 0 0 6px rgba(201, 120, 92, 0.8);
   animation: cta-hive-blink 2s ease-in-out infinite;
   flex-shrink: 0;
@@ -6699,7 +6699,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   font-size: clamp(1.05rem, 2.5vw, 1.28rem);
   font-weight: 400;
   line-height: 1.75;
-  color: #597788;
+  color: #F4A261;
   margin: 0 0 46px;
   max-width: 600px;
 }
@@ -6761,7 +6761,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 /* Primary Button */
 .cta-hive-btn--primary {
-  background: var(--gradient-primary, linear-gradient(135deg, #C06242 0%, #CB7E63 100%));
+  background: var(--gradient-primary, linear-gradient(135deg, #E01C2B 0%, #E7414D 100%));
   color: #fff;
   border: 2px solid transparent;
   box-shadow:
@@ -6798,7 +6798,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 /* Secondary Button */
 .cta-hive-btn--secondary {
   background: transparent;
-  color: #597788;
+  color: #F4A261;
   border: 2px solid rgba(201, 120, 92, 0.55);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
@@ -6807,7 +6807,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .cta-hive-btn--secondary:focus-visible {
   background: rgba(201, 120, 92, 0.12);
   border-color: rgba(201, 120, 92, 0.85);
-  color: #597788;
+  color: #F4A261;
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
   outline: none;
@@ -6858,7 +6858,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 .cta-hive-trust-check {
-  color: var(--primary, #C9785C);
+  color: var(--primary, #E63946);
   font-size: 0.95em;
   font-weight: 700;
 }
@@ -6990,11 +6990,13 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 
+
+
 /* === BUTTON TEXT OVERRIDES START === */
-.btn-accent,
-.btn--accent,
-[class*="btn-accent"],
-[class*="btn--accent"] { color: #333333 !important; }
+.btn-secondary,
+.btn--secondary,
+[class*="btn-secondary"],
+[class*="btn--secondary"] { color: #333333 !important; }
 .navbar .nav-cta-btn,
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
@@ -7515,497 +7517,6 @@ nav .sub-menu.zappy-empty-submenu,
   }
 }
 /* ========== END ORPHANED_ZOOM_IMG_FIX ========== */
-
-
-/* ========== GRID RESPONSIVE FIX (zappy-grid-mobile-fix) ========== */
-/* Ensures grids with explicit columns use CSS variable and are responsive on mobile */
-
-/* DESKTOP: Explicit column grids use CSS variable for grid-template-columns */
-/* The deployment process ensures --zappy-grid-cols is always set in inline styles */
-[data-zappy-explicit-columns="true"] {
-  display: grid !important;
-  grid-template-columns: var(--zappy-grid-cols, repeat(2, minmax(0, 1fr))) !important;
-}
-/* Carousel mode overrides grid display to allow flex-based track layout */
-.zappy-carousel-mode,
-[data-zappy-display-mode="carousel"] {
-  display: block !important;
-}
-
-/* ZOOM WRAPPER: Ensure overflow:hidden and position:relative for crop zoom effect */
-/* The wrapper clips the oversized image to create the zoom/crop effect */
-/* position:relative is needed so absolutely positioned images stay within the wrapper */
-[data-zappy-zoom-wrapper="true"] {
-  overflow: hidden !important;
-  position: relative !important;
-}
-
-/* Prevent inserted elements from exceeding their container width.
-   max-width uses no !important so inline styles can set a specific constraint. */
-.zappy-inserted-element {
-  max-width: 100%;
-  box-sizing: border-box !important;
-}
-
-@media (max-width: 768px) {
-  /* Auto-grid (AI-generated) grids - force single column on mobile */
-  .zappy-preserve-css-grid[data-zappy-auto-grid="true"],
-  [data-zappy-auto-grid="true"] {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-  
-  /* Grid children: override min-width:auto so children with fixed-width
-     content (e.g. zoom wrappers with width:448px!important) can shrink
-     to fit the 1fr column instead of overflowing the grid container. */
-  .zappy-preserve-css-grid[data-zappy-auto-grid="true"] > *,
-  [data-zappy-auto-grid="true"] > *,
-  [data-zappy-explicit-columns="true"] > * {
-    min-width: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  /* Featured grids - force single column on mobile */
-  .featured-grid {
-    grid-template-columns: 1fr !important;
-  }
-  
-  /* Neutralize centering transforms on mobile */
-  [data-zappy-center-transform] {
-    transform: none !important;
-  }
-  
-  /* Media-only grid items - constrain height on mobile */
-  .zappy-preserve-css-grid[data-zappy-auto-grid="true"] > .zappy-grid-item-media-only,
-  [data-zappy-auto-grid="true"] > .zappy-grid-item-media-only {
-    height: auto !important;
-    max-height: 300px !important;
-  }
-  
-  .zappy-preserve-css-grid[data-zappy-auto-grid="true"] > .zappy-grid-item-media-only img,
-  [data-zappy-auto-grid="true"] > .zappy-grid-item-media-only img {
-    height: auto !important;
-    max-height: 300px !important;
-  }
-  
-  /* Full-width mode zoom wrappers - ensure image is visible (not collapsed) */
-  [data-zappy-zoom-wrapper-width-mode="full"] img {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: 300px !important;
-    left: auto !important;
-    top: auto !important;
-    object-fit: cover !important;
-  }
-  
-  /* MOBILE: Explicit column grids - force single column on mobile */
-  [data-zappy-explicit-columns="true"] {
-    grid-template-columns: 1fr !important;
-  }
-  
-  /* Inline grid with fixed pixel columns - make responsive */
-  .zappy-inline-grid-active.zappy-preserve-css-grid {
-    grid-template-columns: 1fr !important;
-  }
-  
-  /* AI-generated section grids with common naming patterns */
-  /* These often have fixed pixel column widths that don't adapt to mobile */
-  /* Exclude .zappy-qv-book-cal-grid — the booking date picker must stay 7-col
-     on mobile (Quick View + PDP). Class name matches [class*="-grid"]. */
-  [class*="-grid"]:not([data-zappy-auto-grid]):not(.zappy-preserve-css-grid):not([data-zappy-explicit-columns="true"]):not(.zappy-qv-book-cal-grid) {
-    grid-template-columns: 1fr !important;
-  }
-  
-  /* Reset any column/row spanning items on mobile - they cause overflow */
-  /* Gallery grids often have -large items that span multiple columns */
-  [class*="-grid"] > [class*="-large"],
-  [class*="-grid"] > [class*="-item-large"],
-  [class*="-grid"] > [style*="grid-column: span"],
-  [class*="-grid"] > [style*="grid-row: span"] {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
-  }
-  
-  /* Common AI-generated visual/frame containers that may overflow */
-  [class*="-visual"],
-  [class*="-frame"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-  }
-  
-  /* CRITICAL: Constrain zoom wrappers on mobile without breaking saved crop geometry */
-  [data-zappy-zoom-wrapper="true"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    overflow: hidden !important;
-    position: relative !important;
-  }
-
-  /* The zoom wrapper's image is position:absolute (so it contributes 0 to the
-     wrapper's intrinsic content width). Inserted-element parents that carry a
-     desktop pixel height can either collapse to 0px wide or preserve a stale
-     desktop height after their child wrapper shrinks on mobile. Force them
-     to fill the parent container and let the wrapper's aspect-ratio determine
-     the real height, eliminating empty space before following text. */
-  .zappy-inserted-element:has(> [data-zappy-zoom-wrapper="true"]) {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-  }
-
-  .zappy-inserted-element:has(> [data-zappy-zoom-wrapper="true"]) > [data-zappy-zoom-wrapper="true"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Reset zoom wrapper images on mobile to responsive display.
-     Images with explicit mobile crop overrides are excluded - the JS runtime
-     applies their crop/zoom after page load. */
-  [data-zappy-zoom-wrapper="true"]:not([data-zappy-zoom-wrapper-width-mode="full"]) img:not([data-zappy-mobile-object-position]):not([data-zappy-mobile-zoom]) {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    max-height: 300px !important;
-    max-width: 100% !important;
-    object-fit: cover !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-  
-  /* Carousel: ensure block display on mobile */
-  .zappy-carousel-mode,
-  [data-zappy-display-mode="carousel"] {
-    display: block !important;
-  }
-  /* JS-initialized carousel: constrain wrapper on mobile */
-  .zappy-carousel-js-init .zappy-carousel-container-wrapper {
-    max-width: calc(100% - 20px) !important;
-  }
-  .zappy-carousel-js-init .zappy-carousel-item {
-    min-width: 0 !important;
-    max-width: 100% !important;
-  }
-  /* CSS-only fallback: if JS didn't initialize, stack items vertically */
-  .zappy-carousel-mode:not(.zappy-carousel-js-init) .zappy-carousel-container-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
-  }
-  .zappy-carousel-mode:not(.zappy-carousel-js-init) .zappy-carousel-track {
-    flex-direction: column !important;
-    transform: none !important;
-    gap: 1.5rem !important;
-  }
-  .zappy-carousel-mode:not(.zappy-carousel-js-init) .zappy-carousel-item {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    flex: 0 0 auto !important;
-  }
-  .zappy-carousel-mode:not(.zappy-carousel-js-init) > :not(style):not(script):not(.zappy-carousel-btn):not(.zappy-carousel-dots):not(.zappy-carousel-container-wrapper) {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    flex: none !important;
-  }
-  .zappy-carousel-mode:not(.zappy-carousel-js-init) .zappy-carousel-btn,
-  .zappy-carousel-mode:not(.zappy-carousel-js-init) .zappy-carousel-dots {
-    display: none !important;
-  }
-  /* Carousel items: fix zoom wrapper padding creating excess spacing */
-  .zappy-carousel-item [data-zappy-zoom-wrapper="true"],
-  .zappy-carousel-mode > div [data-zappy-zoom-wrapper="true"] {
-    padding-bottom: 0 !important;
-    min-height: 0 !important;
-    height: auto !important;
-  }
-  /* Carousel buttons: position inside the card area on mobile */
-  .zappy-carousel-js-init > .zappy-carousel-btn {
-    left: 4px !important;
-    right: auto !important;
-    width: 36px !important;
-    height: 36px !important;
-    font-size: 16px !important;
-    background: rgba(255,255,255,0.9) !important;
-  }
-  .zappy-carousel-js-init > .zappy-carousel-btn.zappy-carousel-right {
-    left: auto !important;
-    right: 4px !important;
-  }
-  
-  /* ========== MAIN PADDING FIX ========== */
-  /* Fix double-padding from old V2 mobile CSS that applied padding to both main and sections */
-  /* Exclude ecommerce-page which needs its own horizontal padding for proper mobile layout */
-  main:not(.ecommerce-page) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  /* Hero sections need flex-column on mobile for proper stacking */
-  section[class*="hero"],
-  .home-Hero-section {
-    flex-direction: column !important;
-  }
-  
-  /* Hero sections need extra padding-top to clear the sticky navbar */
-  /* The navbar is ~70px tall, so hero needs at least 100px padding-top */
-  /* IMPORTANT: Use section tag to avoid matching child elements like buttons that contain "-hero-section" in their BEM class */
-  section[class*="-hero-section"]:first-of-type,
-  main > section:first-child {
-    padding-top: 100px !important;
-  }
-
-  /* Split hero (.hero-sbs-wrap) already applies ~100px top padding for the navbar.
-     Without this override, the global rule above stacks and mobile shows ~200px
-     of dead air above the hero image. */
-  main > section:first-child:has(.hero-sbs-wrap),
-  section[class*="-hero-section"]:first-of-type:has(.hero-sbs-wrap) {
-    padding-top: 0 !important;
-  }
-
-  /* Zoom-crop hero portraits: anchor with inset:0 so RTL/LTR matches and cover
-     cropping stays centered (physical left:0 absolute imgs can mis-read in RTL). */
-  .hero-sbs-image-frame [data-zappy-zoom-wrapper="true"] img {
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-height: none !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-  
-  /* ========== HERO CONTAINER FULL-WIDTH (FULLSCREEN HEROES ONLY) ========== */
-  /* Only strip container padding/width for heroes with actual background images.
-     Text-only and side-by-side hero sections on inner pages need normal padding. */
-  .hero-container,
-  /* V2 generation-time fullscreen heroes */
-  section[data-hero-type="fullscreen-scrim"] > .container,
-  section[data-hero-type="fullscreen-card"] > .container,
-  /* Editor-applied background images on hero sections */
-  section[class*="hero"][data-zappy-bg-type="image"] > .container,
-  section[class*="hero"][data-zappy-bg-type="video"] > .container,
-  /* V1 fallback: hero sections with known bg structures */
-  section[class*="hero"]:has(.hero-bg-container) > .container,
-  section[class*="hero"]:has([data-hero-bg]) > .container {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  /* ========== HERO WIDTH FIX ========== */
-  /* Remove nested horizontal padding for fullscreen-type heroes only */
-  .home-Hero-section .hero-container,
-  .home-Hero-section .hero-content,
-  .home-Hero-section .hero-metrics,
-  .home-Hero-section .hero-image-column,
-  .home-Hero-section .hero-image-frame,
-  .home-Hero-section .container,
-  .home-Hero-section .wrapper,
-  /* V2 fullscreen heroes */
-  section[data-hero-type="fullscreen-scrim"] .hero-container,
-  section[data-hero-type="fullscreen-scrim"] .hero-content,
-  section[data-hero-type="fullscreen-scrim"] .container,
-  section[data-hero-type="fullscreen-card"] .hero-container,
-  section[data-hero-type="fullscreen-card"] .hero-content,
-  section[data-hero-type="fullscreen-card"] .container,
-  /* Editor-applied background images on hero sections */
-  section[class*="hero"][data-zappy-bg-type="image"] .hero-container,
-  section[class*="hero"][data-zappy-bg-type="image"] .hero-content,
-  section[class*="hero"][data-zappy-bg-type="image"] .container,
-  section[class*="hero"][data-zappy-bg-type="video"] .hero-container,
-  section[class*="hero"][data-zappy-bg-type="video"] .hero-content,
-  section[class*="hero"][data-zappy-bg-type="video"] .container,
-  /* V1 fallback: hero sections with known bg structures */
-  section[class*="hero"]:has(.hero-bg-container) .hero-container,
-  section[class*="hero"]:has(.hero-bg-container) .hero-content,
-  section[class*="hero"]:has(.hero-bg-container) .container,
-  section[class*="hero"]:has([data-hero-bg]) .hero-container,
-  section[class*="hero"]:has([data-hero-bg]) .hero-content,
-  section[class*="hero"]:has([data-hero-bg]) .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-inline-start: 0 !important;
-    padding-inline-end: 0 !important;
-  }
-  
-  /* ========== HERO VERTICAL SPACING FIX ========== */
-  .home-Hero-section .hero-content,
-  .home-Hero-section .hero-container,
-  .home-Hero-section .hero-image-column {
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-  }
-  
-  .hero-cta-row {
-    padding: 8px 0 !important;
-    margin: 8px 0 12px !important;
-  }
-  
-  .hero-content {
-    gap: 12px !important;
-  }
-  
-  .hero-metrics {
-    gap: 10px !important;
-  }
-  
-  .metric-card {
-    padding: 12px !important;
-  }
-  
-  .hero-container {
-    gap: 16px !important;
-  }
-
-  /* ========== GRID OVERFLOW FIX ========== */
-  /* CSS Grid items default to min-width:auto, preventing them from shrinking
-     below their content's intrinsic size. Fixed-width zoom wrappers or large
-     images inside grid items can force the column wider than the viewport. */
-  .hero-container > * {
-    min-width: 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* Zappy-inserted image elements with fixed-width zoom wrappers must
-     respect the parent container width on mobile */
-  .zappy-inserted-element,
-  [data-zappy-zoom-wrapper] {
-    max-width: 100% !important;
-  }
-
-  /* ========== FULLSCREEN HERO OVERFLOW FIX ========== */
-
-  section[data-hero-type*="fullscreen"] {
-    height: auto !important;
-    min-height: 100svh !important;
-    padding: 0 clamp(1rem, 5vw, 1.5rem) 90px !important;
-  }
-  section[data-hero-type*="fullscreen"] > [class*="-container"]:not([class*="bg"]):not([class*="scrim"]):not([class*="divider"]),
-  section[data-hero-type*="fullscreen"] > .container {
-    padding-bottom: 100px !important;
-    min-height: auto !important;
-  }
-}
-
-/* ========== HERO SECTION WIDTH CONSTRAINT (ALL VIEWPORTS) ========== */
-/* Prevent hero sections from exceeding viewport width.                */
-/* Root cause: AI-generated CSS may use width:100vw or add horizontal  */
-/* padding to the section, causing it to overflow the viewport.        */
-/* NOTE: Do NOT add overflow:hidden here — it clips SVG bottom dividers */
-/* that need overflow:visible to extend into the next section.          */
-section[class*="hero" i],
-section[class*="Hero"],
-section[data-hero-type] {
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* ========== SVG DIVIDER OVERLAY FIX ========== */
-/* Many AI sections place .section-divider absolutely at the bottom of a section,
-   which can overlap/cut off the last row of content. The safest CSS-only fix
-   is to prevent overlay by forcing the divider into normal flow. */
-.section-divider {
-  position: relative !important;
-  bottom: auto !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  z-index: auto !important;
-  margin-top: 16px !important;
-}
-
-.section-divider svg {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* Exclude small icon SVGs from full-width sizing - these are decorative icons, not wave dividers */
-.section-divider svg.divider-icon,
-.section-divider svg[width="32"],
-.section-divider svg[width="24"],
-.section-divider svg[width="48"],
-.section-divider svg[viewBox="0 0 32 32"],
-.section-divider svg[viewBox="0 0 24 24"],
-.section-divider svg[viewBox="0 0 48 48"] {
-  width: auto !important;
-  height: auto !important;
-  max-width: 64px !important;
-  max-height: 64px !important;
-}
-
-/* ========== END SVG DIVIDER OVERLAY FIX ========== */
-
-/* ========== HORIZONTAL-PAIR GRID MEDIA FIX ========== */
-/* Ensures media in horizontal-pair grids fills columns correctly */
-
-/* Image/video media cells: stretch to fill the grid cell */
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"]:not([data-element-type="icon"]) {
-  position: relative !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  justify-content: stretch !important;
-  min-height: 0 !important;
-}
-
-/* Icon media cells: use flex for centering but allow alignment to be controlled by the editor */
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"][data-element-type="icon"] {
-  position: relative !important;
-  display: flex !important;
-  min-height: 0 !important;
-}
-
-/* Images/videos: preserve aspect ratio while filling column width */
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > img,
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > video {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  flex: 0 0 auto !important;
-  min-height: 0 !important;
-  display: block !important;
-  object-fit: contain !important;
-  object-position: center !important;
-}
-
-/* Icons/SVG: respect their explicit pixel size from the editor */
-/* Do NOT force width/height: 100% - icons should use their inline size */
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > svg,
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > .iconify,
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] [data-zappy-media-cell="true"] > .iconify svg {
-  flex: 0 0 auto !important;
-  min-height: 0 !important;
-  display: inline-block !important;
-}
-
-/* Non-media grid items (buttons, text, etc.) should NOT stretch */
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] > .zappy-inserted-element:not([data-zappy-media-cell]) {
-  align-self: start !important;
-  height: auto !important;
-  width: auto !important;
-  max-width: 100% !important;
-}
-
-/* Buttons inside non-media grid items should NOT stretch horizontally */
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] > .zappy-inserted-element:not([data-zappy-media-cell]) .btn,
-.zappy-horizontal-grid[data-zappy-grid-kind="horizontal-pair"] > .zappy-inserted-element:not([data-zappy-media-cell]) [data-element-type="button"] {
-  width: auto !important;
-  flex: 0 0 auto !important;
-}
-
-/* ========== END HORIZONTAL-PAIR GRID MEDIA FIX ========== */
-
-/* ========== END GRID RESPONSIVE FIX ========== */
 
 
 /* ZAPPY_CONTACT_FORM_LAYOUT_FIX */
