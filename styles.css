@@ -3147,8 +3147,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-services-section .index-services-card--elevated:hover {
-  transform: translateY(-18px);
-  box-shadow: 0 20px 60px rgba(80, 50, 30, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 56px rgba(80, 50, 30, 0.18);
 }
 
 /* Accent bar on elevated card */
@@ -7052,6 +7052,21 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .nav-cta-btn { color: #FFFFFF !important; }
 
 /* === BUTTON TEXT OVERRIDES END === */
+
+.index-services-section .index-services-card--elevated {
+  transform: none !important;
+  box-shadow: 0 8px 30px rgba(80, 50, 30, 0.08) !important;
+  border-color: var(--border-light) !important;
+}
+
+.index-services-section .index-services-card--elevated:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 56px rgba(80, 50, 30, 0.18) !important;
+}
+
+.index-services-section .index-services-card-accent-bar {
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
