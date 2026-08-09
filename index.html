@@ -599,309 +599,189 @@
     <meta name="twitter:description" content="A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic tre">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://yossilevi-musmach.co.il#organization","name":"יוסי חי לוי – אימונים אישיים וייעוץ בתזונה","url":"https://yossilevi-musmach.co.il","description":"A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.","address":{"@type":"PostalAddress","streetAddress":"פלוגות 16 , תל אביב יפו , מרכז , 6763986, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"yossef2411@outlook.com","telephone":"052-6842282"}]},{"@type":"WebSite","@id":"https://yossilevi-musmach.co.il#website","url":"https://yossilevi-musmach.co.il","name":"יוסי חי לוי – אימונים אישיים וייעוץ בתזונה","publisher":{"@id":"https://yossilevi-musmach.co.il#organization"}},{"@type":"ContactPage","@id":"https://yossilevi-musmach.co.il#contactpage","url":"https://yossilevi-musmach.co.il","name":"the hive thai massage &amp; wellness — יוסי חי לוי מעסה מוסמך ומ","mainEntity":{"@id":"https://yossilevi-musmach.co.il#organization"},"potentialAction":{"@type":"CommunicateAction","target":{"@type":"EntryPoint","urlTemplate":"https://yossilevi-musmach.co.il/api/email/contact-form","actionPlatform":["http/method=POST"],"contentType":"application/json"},"instrument":[{"@type":"PropertyValue","name":"name","propertyID":"text","valueRequired":true,"description":"השם שלכם"},{"@type":"PropertyValue","name":"email","propertyID":"email","valueRequired":true,"description":"כתובת המייל שלכם"},{"@type":"PropertyValue","name":"phone","propertyID":"tel","valueRequired":false,"description":"מספר הטלפון שלכם"},{"@type":"PropertyValue","name":"message","propertyID":"textarea","valueRequired":false,"description":"ספרו לי מה מתאים לכם — סוג הטיפול, זמינות, או כל שאלה שיש לכם"},{"@type":"PropertyValue","name":"privacy_consent","propertyID":"checkbox","valueRequired":true}]}}]}</script>
     <meta property="og:type" content="website"> <meta property="og:locale" content="he_IL">     <style> .skip-link { position: absolute; top: 0; left: 0; transform: translateY(-200%); padding: 12px 18px; background: var(--bg-dark, #1a1a1a); color: var(--text-light, #fff); font-weight: 600; border-radius: 0 0 8px 0; z-index: 10000; } .skip-link:focus { transform: none; outline: 2px solid var(--ring, #fff); outline-offset: 2px; } :focus-visible { outline: 2px solid var(--ring, currentColor); outline-offset: 3px; } </style> <!-- Favicons --> <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"> <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"> <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"> <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- Cookie Consent --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">  <!-- Mickidum Accessibility Toolbar -->  
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
-/* ==========================================================================
-   Benefits Section – יוסי חי לוי
-   Design: Soft, human-centered, warm neutrals, organic spacing
-   ========================================================================== */
-
 .index-benefits-section {
   position: relative;
+  background-color: #FFFFFF;
   background: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);
   color: var(--text-dark);
   padding: 80px 16px;
   overflow: hidden;
   direction: rtl;
+  font-family: 'Assistant', 'Heebo', sans-serif;
 }
 
-/* Organic warm-toned background wash (decorative blob) */
-.index-benefits-section__bg-wash {
+/* Decorative Background Blob */
+.index-benefits-section .benefits-bg-blob {
   position: absolute;
   top: -10%;
-  right: -5%;
-  width: 45%;
+  inset-inline-end: -5%;
+  width: 40%;
   height: 60%;
-  background: radial-gradient(ellipse at center, rgba(232, 200, 154, 0.18) 0%, rgba(232, 200, 154, 0) 70%);
-  border-radius: 50%;
-  filter: blur(60px);
+  background: radial-gradient(circle at 30% 40%, rgba(232, 200, 154, 0.15) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
+  border-radius: 50%;
 }
 
-/* ── Container ── */
-.index-benefits-section__container {
-  position: relative;
-  z-index: 2;
+.index-benefits-section .benefits-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
-/* ── Section Header ── */
-.index-benefits-section__header {
+/* Header Styles */
+.index-benefits-section .benefits-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 56px;
 }
 
-.index-benefits-section__title {
+.index-benefits-section .olive-branch-divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.index-benefits-section .olive-branch-divider svg {
+  width: 80px;
+  height: auto;
+}
+
+.index-benefits-section .benefits-heading {
   font-family: 'Cormorant Garamond', 'Noto Serif', serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   color: #2C1F14;
-  margin: 0 0 16px 0;
+  margin-bottom: 16px;
   text-align: center;
-  max-width: none !important;
+  max-width: 700px;
+  margin-inline: auto;
 }
 
-.index-benefits-section__subtitle {
-  font-family: 'Assistant', 'Heebo', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.8;
+.index-benefits-section .benefits-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
   color: #5A4A3A;
-  max-width: 680px;
-  margin: 0 auto 24px auto;
+  max-width: 650px;
+  margin-inline: auto;
   text-align: center;
 }
 
-/* Olive branch divider ornament */
-.index-benefits-section__divider-ornament {
-  display: flex;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-.index-benefits-section__divider-ornament svg {
-  width: 80px;
-  height: auto;
-}
-
-/* ── Content Grid: Image (left) + Benefits (right) ── */
-.index-benefits-section__content-grid {
+/* Grid Layout */
+.index-benefits-section .benefits-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 32px;
 }
 
-/* ── Image Column (Left in RTL) ── */
-.index-benefits-section__image-col {
-  position: relative;
+/* Card Styles */
+.index-benefits-section .benefit-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-}
-
-.index-benefits-section__image-main {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(80,50,30,0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  z-index: 2;
-  width: 85%;
-  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 16px 56px rgba(80, 50, 30, 0.18);
-  aspect-ratio: 4 / 5;
 }
 
-.index-benefits-section__image-main img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.index-benefits-section .benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(200,103,58,0.28);
 }
 
-.index-benefits-section__image-accent {
-  position: absolute;
-  bottom: -5%;
-  left: -5%;
-  z-index: 3;
-  width: 55%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 40px rgba(200, 103, 58, 0.28);
-  aspect-ratio: 1 / 1;
-  border: 4px solid #FAF7F2;
-}
-
-.index-benefits-section__image-accent img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Decorative stacked stones */
-.index-benefits-section__stones {
-  position: absolute;
-  bottom: -10%;
-  right: -8%;
-  z-index: 1;
-  width: 120px;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.index-benefits-section__stones svg {
-  width: 100%;
-  height: auto;
-}
-
-/* ── Benefits Column (Right in RTL) ── */
-.index-benefits-section__benefits-col {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* ── Benefit Card ── */
-.index-benefits-section__benefit-card {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 20px;
-  align-items: flex-start;
-  background: #FAF7F2;
-  border: 1px solid rgba(180, 150, 120, 0.25);
-  border-radius: 16px;
-  padding: 1.5rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.index-benefits-section__benefit-card:hover {
-  box-shadow: 0 8px 32px rgba(80, 50, 30, 0.12);
-  transform: translateY(-2px);
-}
-
-.index-benefits-section__benefit-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  background: rgba(200, 103, 58, 0.1);
+.index-benefits-section .benefit-icon-wrapper {
+  margin-bottom: 20px;
+  width: 48px;
+  height: 48px;
+  background: rgba(200, 103, 58, 0.08);
   border-radius: 12px;
-  color: var(--primary);
-}
-
-.index-benefits-section__benefit-icon svg {
-  width: 28px;
-  height: 28px;
-}
-
-.index-benefits-section__benefit-text {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  color: #C8673A;
 }
 
-.index-benefits-section__benefit-title {
+.index-benefits-section .benefit-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.index-benefits-section .benefit-content {
+  flex: 1;
+  text-align: start;
+}
+
+.index-benefits-section .benefit-title {
   font-family: 'Assistant', 'Heebo', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.35;
   color: #2C1F14;
-  margin: 0;
-  text-align: start;
+  margin-bottom: 12px;
 }
 
-.index-benefits-section__benefit-desc {
-  font-family: 'Assistant', 'Heebo', sans-serif;
-  font-size: 0.95rem;
+.index-benefits-section .benefit-text {
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.75;
   color: #5A4A3A;
-  margin: 0;
-  text-align: start;
+  margin-bottom: 0;
 }
 
-/* ── Responsive: Mobile (max-width: 768px) ── */
-@media (max-width: 768px) {
+/* Image Wrapper */
+.index-benefits-section .benefit-image-wrapper {
+  margin-top: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+}
+
+.index-benefits-section .benefit-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive Desktop Layout */
+@media (min-width: 768px) {
   .index-benefits-section {
-    padding: 60px 16px;
+    padding: 100px 32px;
   }
 
-  .index-benefits-section__header {
-    margin-bottom: 40px;
+  .index-benefits-section .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 
-  .index-benefits-section__title {
-    font-size: 1.75rem;
+  .index-benefits-section .benefit-card {
+    padding: 2rem;
   }
 
-  .index-benefits-section__subtitle {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-
-  .index-benefits-section__content-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .index-benefits-section__image-col {
-    min-height: 320px;
-    
-  }
-
-  .index-benefits-section__image-main {
-    width: 80%;
-    aspect-ratio: 4 / 5;
-  }
-
-  .index-benefits-section__image-accent {
-    width: 50%;
-    left: 0%;
-    bottom: -8%;
-  }
-
-  .index-benefits-section__stones {
-    bottom: -12%;
-    right: 0%;
-    width: 90px;
-  }
-
-  .index-benefits-section__benefits-col {
-    
-    gap: 20px;
-  }
-
-  .index-benefits-section__benefit-card {
-    grid-template-columns: 44px 1fr;
-    gap: 16px;
-    padding: 1.25rem;
-  }
-
-  .index-benefits-section__benefit-icon {
-    width: 44px;
-    height: 44px;
-  }
-
-  .index-benefits-section__benefit-icon svg {
-    width: 24px;
-    height: 24px;
+  .index-benefits-section .benefit-image-wrapper {
+    aspect-ratio: 4 / 3;
   }
 }
 
-@media (max-width: 480px) {
-  .index-benefits-section__image-col {
-    min-height: 260px;
+/* Large Desktop Adjustments */
+@media (min-width: 1024px) {
+  .index-benefits-section .benefits-grid {
+    gap: 32px;
   }
 
-  .index-benefits-section__image-main {
-    width: 90%;
-  }
-
-  .index-benefits-section__image-accent {
-    width: 55%;
-    left: -2%;
-  }
-
-  .index-benefits-section__stones {
-    display: none;
+  .index-benefits-section .benefit-card {
+    padding: 2.5rem;
   }
 }
-/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:בית-benefits — stripped 2 order declaration(s) conflicting with RTL grid */
-
 </style>
     <style id="zappy-critical-above-fold-css">
 html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden}.hero-section,.index-hero-section{min-height:560px}section[data-hero-type*="fullscreen"]{min-height:100vh}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"],section[data-hero-type*="fullscreen"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
@@ -1102,105 +982,76 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 חיונית:</b> טנטרה עוסקת בשחרור ובזרימה של אנרגיה חיונית בגוף. תרגולים פיזיים כמו נשימות, תנוחות ומדיטציה עוזרים לחזק את הזרימה הזו, מה שמוביל
 לחוויות רוחניות מעמיקות.&nbsp;</li></ul> <p><a href="#contact" class="index-services-card-link">לפרטים נוספים <i class="fa fa-arrow-right" data-element-type="icon" data-element-id="icon-1786019461654-ku8nckgjw" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i></a></p></div> </article><article class="index-services-card" style="box-sizing: border-box; background-color: rgb(255, 255, 255) !important; padding: 32px !important; grid-area: auto !important;" id="zappy-section-5-add-1780358925846-ozv2nq-add-1780358927873-s2i6ie" data-grid-item-index="5"> <div class="index-services-card-icon" aria-hidden="true"> <svg data-element-type="icon" data-icon-type="svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" data-element-id="icon-1780358925846-luexmgv6d-add-1780358927873-s2i6ie"> <circle cx="22" cy="22" r="20" stroke="#C9785C" stroke-width="1.5" opacity="0.25"></circle> <rect x="10" y="20" width="5" height="8" rx="2.5" stroke="#C9785C" stroke-width="1.5" fill="none"></rect> <rect x="29" y="20" width="5" height="8" rx="2.5" stroke="#C9785C" stroke-width="1.5" fill="none"></rect> <line x1="15" y1="24" x2="29" y2="24" stroke="#C9785C" stroke-width="1.5" stroke-linecap="round"></line> <rect x="18" y="18" width="8" height="12" rx="2" stroke="#7D8664" stroke-width="1.5" fill="none"></rect> </svg> </div> <div class="index-services-card-content"> <p><span class="index-services-card-tag">לחוויה מושלמת</span></p><h3 class="index-services-card-title">עיסוי מפנק&nbsp;</h3> <p class="index-services-card-text">שילוב מושלם של עיסוי שוודי קלאסי ולומי לומי — חוויה מדליקה, מרגיעה ומפנקת שעוטפת את כל הגוף ומשאירה תחושת ריחוף ושחרור מוחלט.</p> <p><a href="#contact" class="index-services-card-link">לפרטים נוספים <i class="fa fa-arrow-right" data-element-type="icon" data-element-id="icon-1786019461654-47vf0dvy5" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i></a></p></div> </article> </div> <!-- End grid --> <!-- Bottom CTA --> <div class="index-services-cta" style="text-align: center !important; display: flex !important; justify-content: center !important; align-items: flex-start !important; width: 100% !important;"> <a href="https://api.whatsapp.com/send?phone=972526842282" class="index-services-btn btn btn-primary" style="outline: none; color: rgb(255, 255, 255) !important; border-color: rgb(181, 99, 74) !important; background-color: rgb(181, 99, 74) !important; background-image: none !important;" data-element-type="button" data-element-id="btn-1780184617858-ln2np1aeo" data-native-element="true" target="_blank" rel="noopener noreferrer">לתיאום תור ופרטים נוספים</a> </div> </div> <!-- Bottom torn-paper divider transitioning to next dark section --> <div class="index-services-divider-wrapper"> <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0,90 L0,45 Q30,38 60,46 T120,42 Q150,48 180,40 T240,44 Q270,38 300,46 T360,40 Q390,48 420,42 T480,46 Q510,38 540,44 T600,40 Q630,48 660,42 T720,46 Q750,38 780,44 T840,40 Q870,48 900,42 T960,46 Q990,38 1020,44 T1080,40 Q1110,48 1140,42 T1200,46 L1200,90 Z" fill="#FAF7F2"></path> </svg> </div> </section>
 <section class="index-benefits-section" data-layout-spec="בית-benefits" data-zappy-section="true" id="benefits">
-  <!-- Decorative organic background wash -->
-  <div class="index-benefits-section__bg-wash" aria-hidden="true"></div>
-
-  <div class="index-benefits-section__container">
+  <div class="benefits-bg-blob" aria-hidden="true"></div>
+  
+  <div class="benefits-container">
     
     <!-- Section Header -->
-    <div class="index-benefits-section__header">
-      <h2 class="index-benefits-section__title">למה לבחור בטיפול אישי עם יוסי?</h2>
-      <p class="index-benefits-section__subtitle">
-        כל טיפול מותאם אישית לגוף, לקצב ולצרכים שלך — בסביבה שקטה, מכבדת ומקצועית. כאן הגוף מקבל את מה שהוא באמת צריך.
-      </p>
-      <!-- Olive branch divider ornament -->
-      <div class="index-benefits-section__divider-ornament" aria-hidden="true">
-        <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M40 2 C25 8 10 12 2 18" stroke="#C8A87A" stroke-width="1.5" stroke-linecap="round" opacity="0.7"></path>
-          <path d="M40 2 C55 8 70 12 78 18" stroke="#C8A87A" stroke-width="1.5" stroke-linecap="round" opacity="0.7"></path>
-          <circle cx="40" cy="3" r="2.5" fill="#C8A87A" opacity="0.7"></circle>
-          <path d="M2 18 C5 20 8 22 10 22" stroke="#C8A87A" stroke-width="1.5" stroke-linecap="round" opacity="0.7"></path>
-          <path d="M78 18 C75 20 72 22 70 22" stroke="#C8A87A" stroke-width="1.5" stroke-linecap="round" opacity="0.7"></path>
+    <div class="benefits-header">
+      <!-- Olive Branch Divider Decoration -->
+      <div class="olive-branch-divider" aria-hidden="true">
+        <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40,2 Q45,8 52,10 Q45,12 40,18 Q35,12 28,10 Q35,8 40,2 Z" fill="none" stroke="#C8A87A" stroke-width="1.5" opacity="0.7"></path>
+          <path d="M28,10 Q20,6 15,10 Q20,14 28,10 Z" fill="none" stroke="#C8A87A" stroke-width="1.2" opacity="0.5"></path>
+          <path d="M52,10 Q60,6 65,10 Q60,14 52,10 Z" fill="none" stroke="#C8A87A" stroke-width="1.2" opacity="0.5"></path>
         </svg>
       </div>
+      <h2 class="benefits-heading">למה לבחור בטיפול אישי עם יוסי?</h2>
+      <p class="benefits-subtitle">כל טיפול מותאם אישית לגוף, לקצב ולצרכים שלך — בסביבה שקטה, מכבדת ומקצועית. כאן הגוף מקבל את מה שהוא באמת צריך.</p>
     </div>
 
-    <!-- Main Content Grid: Image + Benefits List -->
-    <div class="index-benefits-section__content-grid">
+    <!-- Benefits Grid -->
+    <div class="benefits-grid">
       
-      <!-- Left Column: Decorative Image Collage -->
-      <div class="index-benefits-section__image-col">
-        <div class="index-benefits-section__image-main">
-          <img alt="טיפול מסאז\" src="/assets/site-index-benefits-image-1.webp" data-placeholder="index-benefits-image-1" data-context="Close-up of a massage therapist\" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" loading="lazy" decoding="async" fetchpriority="low">
-        </div>
-        <div class="index-benefits-section__image-accent">
-          <img alt="אביזרי טיפול טבעיים ומרגיעים" src="/assets/site-index-benefits-image-2.webp" data-placeholder="index-benefits-image-2" data-context="Flat lay of natural wellness props on a warm linen surface: smooth river stones, a small green plant sprig, a folded white towel, and a glass of water with a slice of lemon. Overhead view. Soft natural daylight. Warm beige and green tones. Spa and wellness aesthetic." style="width: 100%; height: 100%; object-fit: cover; object-position: center;" loading="lazy" decoding="async" fetchpriority="low">
-        </div>
-        <!-- Decorative stacked stones -->
-        <div class="index-benefits-section__stones" aria-hidden="true">
-          <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="60" cy="85" rx="45" ry="12" fill="#8B6F5C" opacity="0.85"></ellipse>
-            <ellipse cx="60" cy="70" rx="35" ry="10" fill="#9A7E6B" opacity="0.85"></ellipse>
-            <ellipse cx="60" cy="56" rx="25" ry="8" fill="#A88D7A" opacity="0.85"></ellipse>
+      <!-- Card 1 -->
+      <div class="benefit-card card-default">
+        <div class="benefit-icon-wrapper">
+          <svg data-element-type="icon" data-icon-type="svg" class="benefit-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle>
+            <path d="M8 12 L11 15 L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">הקלה על מתח יומיומי</h3>
+          <p class="benefit-text">עבודה ממושכת, ישיבה ממושכת, עומס נפשי — כל אלה משאירים עקבות בגוף. הטיפול משחרר אזורי מתח עמוקים ומחזיר תחושת קלילות ורוגע אמיתי.</p>
+        </div>
+        <div class="benefit-image-wrapper">
+          <img alt="טיפול מסאז\" class="benefit-image" src="/assets/site-index-benefits-image-1.webp" data-placeholder="index-benefits-image-1" data-context="Close-up of a massage therapist\" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" loading="lazy" decoding="async" fetchpriority="low">
+        </div>
       </div>
 
-      <!-- Right Column: Benefits Cards -->
-      <div class="index-benefits-section__benefits-col">
-        
-        <!-- Benefit 1 -->
-        <div class="index-benefits-section__benefit-card card-bordered">
-          <div class="index-benefits-section__benefit-icon">
-            <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-              <line x1="9" y1="9" x2="9.01" y2="9"></line>
-              <line x1="15" y1="9" x2="15.01" y2="9"></line>
-            </svg>
-          </div>
-          <div class="index-benefits-section__benefit-text">
-            <h3 class="index-benefits-section__benefit-title">הקלה על מתח יומיומי</h3>
-            <p class="index-benefits-section__benefit-desc">
-              עבודה ממושכת, ישיבה ממושכת, עומס נפשי — כל אלה משאירים עקבות בגוף. הטיפול משחרר אזורי מתח עמוקים ומחזיר תחושת קלילות ורוגע אמיתי.
-            </p>
-          </div>
+      <!-- Card 2 -->
+      <div class="benefit-card card-default">
+        <div class="benefit-icon-wrapper">
+          <svg data-element-type="icon" data-icon-type="svg" class="benefit-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 9V7C17 4.79086 15.2091 3 13 3H11C8.79086 3 7 4.79086 7 7V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M4 12H20L19 20H5L4 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+            <path d="M12 15V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          </svg>
         </div>
-
-        <!-- Benefit 2 -->
-        <div class="index-benefits-section__benefit-card card-bordered">
-          <div class="index-benefits-section__benefit-icon">
-            <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 20V10"></path>
-              <path d="M12 20V4"></path>
-              <path d="M6 20v-6"></path>
-            </svg>
-          </div>
-          <div class="index-benefits-section__benefit-text">
-            <h3 class="index-benefits-section__benefit-title">שיקום והתאוששות לאחר אימונים</h3>
-            <p class="index-benefits-section__benefit-desc">
-              כמאמן כושר אישי מוסמך, יוסי מבין לעומק את הגוף הספורטיבי. הטיפול מסייע בהפחתת כאבי שרירים, שיפור גמישות ומניעת פציעות חוזרות.
-            </p>
-          </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">שיקום והתאוששות לאחר אימונים</h3>
+          <p class="benefit-text">כמאמן כושר אישי מוסמך, יוסי מבין לעומק את הגוף הספורטיבי. הטיפול מסייע בהפחתת כאבי שרירים, שיפור גמישות ומניעת פציעות חוזרות.</p>
         </div>
-
-        <!-- Benefit 3 -->
-        <div class="index-benefits-section__benefit-card card-bordered">
-          <div class="index-benefits-section__benefit-icon">
-            <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-          </div>
-          <div class="index-benefits-section__benefit-text">
-            <h3 class="index-benefits-section__benefit-title">טיפול אישי ודיסקרטי</h3>
-            <p class="index-benefits-section__benefit-desc">
-              פגישה אחד-על-אחד בלבד, ללא המתנה וללא עומס. הטיפול מתקיים בקצב שלך, עם תשומת לב מלאה לגוף ולתחושות שלך — מרחב שקט ומכבד לחלוטין.
-            </p>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Card 3 -->
+      <div class="benefit-card card-default">
+        <div class="benefit-icon-wrapper">
+          <svg data-element-type="icon" data-icon-type="svg" class="benefit-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V20M12 4L8 8M12 4L16 8M12 20L8 16M12 20L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"></circle>
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">טיפול אישי ודיסקרטי</h3>
+          <p class="benefit-text">פגישה אחד-על-אחד בלבד, ללא המתנה וללא עומס. הטיפול מתקיים בקצב שלך, עם תשומת לב מלאה לגוף ולתחושות שלך — מרחב שקט ומכבד לחלוטין.</p>
+        </div>
+        <div class="benefit-image-wrapper">
+          <img alt="אביזרי טיפול טבעיים ומרגיעים" class="benefit-image" src="/assets/site-index-benefits-image-2.webp" data-placeholder="index-benefits-image-2" data-context="Flat lay of natural wellness props on a warm linen surface: smooth river stones, a small green plant sprig, a folded white towel, and a glass of water with a slice of lemon. Overhead view. Soft natural daylight. Warm beige and green tones. Spa and wellness aesthetic." style="width: 100%; height: 100%; object-fit: cover; object-position: center;" loading="lazy" decoding="async" fetchpriority="low">
+        </div>
+      </div>
+
     </div>
 
   </div>
