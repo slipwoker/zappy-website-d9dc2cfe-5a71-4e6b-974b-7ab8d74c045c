@@ -7067,6 +7067,19 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .index-services-section .index-services-card-accent-bar {
   display: none !important;
 }
+
+.index-benefits-section__benefits-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+}
+
+.index-benefits-section__benefit-card {
+  flex: 1 1 0px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
