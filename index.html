@@ -1084,30 +1084,85 @@
 }
 </style>
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .home-hive-section {
-  position: relative;
   background: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);
   color: var(--text-dark);
   padding: 80px 16px;
-  overflow: hidden;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   direction: rtl;
 }
 
 .home-hive-section .hive-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 
+.home-hive-section .hive-card {
+  background: var(--bg-light);
+  border-radius: 32px;
+  box-shadow: 0 16px 56px rgba(80,50,30,0.18);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  direction: rtl;
+  min-height: 480px;
+}
+
+.home-hive-section .hive-image-wrapper {
+  position: relative;
+  flex: 0 0 45%;
+  max-width: 45%;
+  align-self: stretch;
+  overflow: hidden;
+  background: #E8DED1;
+}
+
+.home-hive-section .hive-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.home-hive-section .hive-card:hover .hive-image-wrapper img {
+  transform: scale(1.03);
+}
+
+.home-hive-section .hive-image-overlay {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255,255,255,0) 60%, rgba(250,247,242,0.25) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .home-hive-section .hive-content {
+  flex: 1 1 55%;
+  padding: 56px 64px 56px 48px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: right;
+  z-index: 2;
+  background: var(--bg-light);
 }
 
 .home-hive-section .hive-heading {
@@ -1115,35 +1170,34 @@
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #2C1F14;
-  margin: 0;
-  max-width: 600px;
+  color: var(--text-dark);
+  margin: 0 0 20px 0;
+  letter-spacing: 0;
 }
 
-.home-hive-section .hive-text {
+.home-hive-section .hive-description {
   font-family: 'Assistant', 'Heebo', sans-serif;
   font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.8;
   color: #5A4A3A;
-  margin: 0;
-  max-width: 550px;
+  margin: 0 0 36px 0;
+  max-width: 480px;
 }
 
 .home-hive-section .hive-buttons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
-  margin-top: 8px;
+  flex-wrap: wrap;
 }
 
-.home-hive-section .hive-btn-main {
+.home-hive-section .btn-primary {
   background: #C8673A;
   color: #FFFFFF;
   padding: 14px 28px;
-  border-radius: 100px;
+  border-radius: 50px;
   border: none;
   font-weight: 600;
   font-size: 1rem;
@@ -1152,111 +1206,124 @@
   gap: 8px;
   cursor: pointer;
   text-decoration: none;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 24px rgba(200,103,58,0.25);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(200,103,58,0.25);
+  white-space: nowrap;
 }
 
-.home-hive-section .hive-btn-main:hover {
-  box-shadow: 0 8px 32px rgba(200,103,58,0.4);
+.home-hive-section .btn-primary:hover {
+  background: #B85A32;
+  box-shadow: 0 8px 24px rgba(200,103,58,0.35);
   transform: translateY(-2px);
 }
 
-.home-hive-section .btn-icon {
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
-.home-hive-section .hive-btn-ghost {
+.home-hive-section .btn-secondary {
   background: transparent;
-  color: #C8673A;
-  border: none;
-  padding: 10px 0;
-  font-size: 0.9rem;
+  color: #2C1F14;
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: 1.5px solid #2C1F14;
   font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
 }
 
-.home-hive-section .hive-btn-ghost:hover {
-  color: #a04e2d;
+.home-hive-section .btn-secondary:hover {
+  background: #2C1F14;
+  color: #FFFFFF;
+  border-color: #2C1F14;
+  transform: translateY(-2px);
 }
 
-.home-hive-section .btn-arrow {
-  font-size: 1.1rem;
-  transition: transform 0.2s ease;
-}
-
-.home-hive-section .hive-btn-ghost:hover .btn-arrow {
-  transform: translateX(4px);
-}
-
-.home-hive-section .hive-image-wrapper {
-  margin-top: 32px;
-  width: 100%;
-  max-width: 300px;
-  position: relative;
-}
-
-.home-hive-section .hive-decor-image {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 12px 40px rgba(200,103,58,0.28);
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-}
-
-.home-hive-section .hive-decoration-stones {
+.home-hive-section .hive-decoration {
   position: absolute;
-  bottom: -10px;
-  left: 5%;
-  width: 120px;
-  height: 120px;
+  bottom: 24px;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
   pointer-events: none;
-  z-index: 1;
-  opacity: 0.9;
+  color: #C8A87A;
+  opacity: 0.7;
+  width: 120px;
+  height: 40px;
 }
 
-.home-hive-section .hive-decoration-stones svg {
+.home-hive-section .hive-decoration svg {
   width: 100%;
   height: 100%;
-}
-
-@media (min-width: 768px) {
-  .home-hive-section {
-    padding: 100px 32px;
-  }
-  .home-hive-section .hive-heading {
-    font-size: 2.5rem;
-  }
-  .home-hive-section .hive-text {
-    font-size: 1.125rem;
-  }
-  .home-hive-section .hive-image-wrapper {
-    max-width: 350px;
-  }
+  display: block;
 }
 
 @media (max-width: 768px) {
   .home-hive-section {
-    padding: 60px 16px;
+    padding: 100px 16px 60px;
+    min-height: auto;
+    align-items: flex-start;
   }
+
+  .home-hive-section .hive-card {
+    flex-direction: column;
+    border-radius: 24px;
+    min-height: auto;
+  }
+
+  .home-hive-section .hive-image-wrapper {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+    height: 280px;
+    align-self: auto;
+  }
+
+  .home-hive-section .hive-content {
+    flex: 1 1 auto;
+    padding: 32px 20px 40px;
+    align-items: flex-start;
+    text-align: right;
+  }
+
+  .home-hive-section .hive-heading {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+  }
+
+  .home-hive-section .hive-description {
+    font-size: 1rem;
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+
   .home-hive-section .hive-buttons {
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
     gap: 12px;
   }
-  .home-hive-section .hive-decoration-stones {
+
+  .home-hive-section .btn-primary,
+  .home-hive-section .btn-secondary {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home-hive-section .hive-decoration {
+    bottom: 16px;
     width: 80px;
-    height: 80px;
-    bottom: -5px;
-    left: 2%;
+    height: 30px;
+  }
+
+  .home-hive-section .hive-image-overlay {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(250,247,242,0.3) 100%);
   }
 }
+
 /* ZAPPY_POSTGEN_GUARD_GRAD_BG_FALLBACK:Home-hive (home-hive) — solid fallback behind gradient */
 [data-layout-spec="Home-hive"].home-hive-section,
 [data-layout-spec="Home-hive"] .home-hive-section {
@@ -1792,31 +1859,35 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 </section>
 
 <section class="gallery-hive" aria-labelledby="gallery-hive-title" id="zappy-section-18"> <div class="gallery-hive__container"> <!-- Header --> <div class="gallery-hive__header"> <p><span class="gallery-hive__tag" style="color: rgb(47, 41, 37) !important;">הגלריה שלנו</span> </p><h2 class="gallery-hive__title" id="gallery-hive-title"><u>הציצו לתוך המרחב</u></h2> <p class="gallery-hive__subtitle">אווירה חמה, נקייה ומקצועית — מקום שבו הגוף והנפש מוצאים מנוחה</p> <div class="gallery-hive__divider" aria-hidden="true"></div> </div> <!-- Grid --> <div class="gallery-hive__grid zappy-preserve-css-grid" role="list" id="zappy-auto-grid-1780358848246-be4oc5" data-zappy-auto-grid="true" data-original-item-width="376" data-original-gap="16px" style="display: grid; --zappy-grid-cols: repeat(3, minmax(0, 1fr)); grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true"> <!-- Image 1 — Large, spans 2 rows --> <div class="gallery-hive__item gallery-hive__item--tall" role="listitem" data-grid-item-index="0"> <div class="gallery-hive__img-wrap"> <img src="/assets/image-1780185439498-045mzm.webp" alt="טיפול עיסוי תאילנדי בעיצומו — ידיים מקצועיות על גבי הגוף" class="gallery-hive__img" data-placeholder="gallery-massage-treatment" data-context="Professional Thai massage treatment in progress, therapist's skilled hands on client's back, warm amber lighting, clean white linens, serene wellness studio atmosphere" data-element-type="image" data-element-id="img-1780358848197-79uuixbpq" loading="lazy" decoding="async" fetchpriority="low"> <div class="gallery-hive__overlay" aria-hidden="true"> <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">טיפול עיסוי תאילנדי</span> </div> </div> </div> <!-- Image 2 --> <div class="gallery-hive__item" role="listitem" style="display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important;" data-grid-item-index="1"> <div class="gallery-hive__img-wrap"> <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-e1puszs7l" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780359565826-sspq3w.webp?v=1780359567854" alt="חדר טיפולים חם ומזמין עם תאורה עמומה ואווירה שלווה" class="gallery-hive__img" data-placeholder="gallery-treatment-room" data-context="Warm cozy massage treatment room, soft amber lighting, natural wood accents, plants, peaceful and inviting wellness space, earthy tones" data-element-type="image" data-element-id="img-1780358848197-e1puszs7l" style="object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -15.2577% !important; width: 100% !important; height: 146.235% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important; position: absolute !important" data-zappy-zoom="0.8" data-zappy-original-width="376" data-zappy-original-height="297" data-zappy-object-position="50% 33%" loading="lazy" decoding="async" fetchpriority="low"></div> <div class="gallery-hive__overlay" aria-hidden="true"> <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">חדר הטיפולים</span> </div> </div> </div> <!-- Image 3 --> <div class="gallery-hive__item" role="listitem" style="display: flex !important; flex-direction: column !important; justify-content: flex-end !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important;" data-grid-item-index="2"> <div class="gallery-hive__img-wrap"> <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-1vmnz3vuy" data-element-type="image" data-zappy-zoom-wrapper-width="376px" data-zappy-zoom-wrapper-height="297px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 376px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 297px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780359781466-01tbtb.webp?v=1780359784111" alt="מיטת עיסוי מקצועית עם מצעי פשתן טבעיים" class="gallery-hive__img" data-placeholder="gallery-massage-table" data-context="Professional massage table with clean natural linen sheets, folded towels, minimalist wellness studio, warm natural light, earthy beige tones" data-element-type="image" data-element-id="img-1780358848197-1vmnz3vuy" style="object-position: 87% 93% !important; margin: 0px !important; left: -3.05375% !important; top: 0% !important; width: 103.51% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important; position: absolute !important" data-zappy-zoom="0.8" data-zappy-object-position="87% 93%" data-zappy-original-width="376" data-zappy-original-height="297" loading="lazy" decoding="async" fetchpriority="low"></div> <div class="gallery-hive__overlay" aria-hidden="true"> <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">מיטת הטיפולים</span> </div> </div> </div> <!-- Image 4 — Wide, spans 2 columns --> <div class="gallery-hive__item gallery-hive__item--wide" role="listitem" data-grid-item-index="3"> <div class="gallery-hive__img-wrap"> <div data-zappy-zoom-wrapper="true" data-element-id="img-1780358848197-nifpgid00" data-element-type="image" data-zappy-zoom-wrapper-width="768px" data-zappy-zoom-wrapper-height="465px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 768px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 465px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-1780360177422-nl7yjb.webp?v=1780360179291" alt="שמנים אתריים ואבני בזלת מחוממות על משטח עץ" class="gallery-hive__img" data-placeholder="gallery-oils-stones" data-context="Arrangement of essential oil bottles, warm basalt massage stones, dried flowers, and natural wellness products on a wooden surface, warm earthy tones, spa aesthetic" data-element-type="image" data-element-id="img-1780358848197-nifpgid00" style="object-position: 50% 33% !important; margin: 0px !important; left: 0% !important; top: -31.7357% !important; width: 100% !important; height: 196.169% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important; position: absolute !important" data-zappy-zoom="0.9" data-zappy-original-width="768" data-zappy-original-height="465" data-zappy-object-position="50% 33%" loading="lazy" decoding="async" fetchpriority="low"></div> <div class="gallery-hive__overlay" aria-hidden="true"> <span class="gallery-hive__caption" style="color: rgb(47, 41, 37) !important;">שמנים ואבנים</span> </div> </div> </div> <!-- Image 5 -->  <!-- Image 6 -->  </div> <!-- End Grid --> <!-- CTA --> <div class="gallery-hive__cta-wrap" style="text-align: center !important; display: flex !important; justify-content: center !important; align-items: flex-start !important; width: 100% !important;"> <a href="https://api.whatsapp.com/send?phone=972526842282" class="gallery-hive__cta" aria-label="קבעו טיפול עכשיו" style="color: rgb(255, 255, 255) !important; outline: none; border-color: transparent !important; background-color: transparent !important; background-image: linear-gradient(135deg, rgb(192, 98, 66), rgb(203, 126, 99)) !important;" data-native-element="true" data-element-id="btn-1786275411277-hlm921z50" data-element-type="button" target="_blank" rel="noopener noreferrer"> <span>קבעו טיפול עכשיו</span> <svg class="gallery-hive__cta-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-element-type="icon" data-element-id="icon-1780358848196-t5r9qic4b" data-icon-type="svg" style="cursor: pointer;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 5 5 12 12 19"></polyline></svg> </a> </div> </div> </section>
-<section class="home-hive-section" data-layout-spec="Home-hive" data-zappy-section="true" id="zappy-section-19">
+<section class="home-hive-section" data-layout-spec="Home-hive" dir="rtl" data-zappy-section="true" id="zappy-section-19">
   <div class="hive-container">
-    <div class="hive-content">
-      <h2 class="hive-heading">מוכנים לחוות את ההבדל?</h2>
-      <p class="hive-text">טיפול אחד יכול לשנות את האופן שבו הגוף שלך מרגיש — קבעו תור עוד היום</p>
-      <div class="hive-buttons">
-        <a href="https://api.whatsapp.com/send?phone=972526842282" class="btn-primary btn-pill hive-btn-main">
-          <span class="btn-icon">✦</span> לתיאום טיפול עכשיו
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=972526842282" class="btn-ghost hive-btn-ghost">
-          לפרטים נוספים <span class="btn-arrow">←</span>
-        </a>
-      </div>
+    <div class="hive-card">
       <div class="hive-image-wrapper">
-        <img data-placeholder="home-hive-image-1" data-context="A warm, softly-lit close-up of smooth river stones stacked in balance on a textured linen cloth, with a sprig of fresh olive leaves beside them, evoking calm, stability, and natural wellness — suitable for a massage and wellness brand." width="600" height="400" src="" alt="אבני נחל מאוזנות על בד פשתן לצד ענף זית" class="hive-decor-image" style="object-fit: cover; object-position: center;" loading="lazy" decoding="async" fetchpriority="low">
+        <img alt="אבני נחל מאוזנות על בד פשתן לצד ענף זית" data-placeholder="home-hive-image-1" data-context="A warm, softly-lit close-up of smooth river stones stacked in balance on a textured linen cloth, with a sprig of fresh olive leaves beside them, evoking calm, stability, and natural wellness — suitable for a massage and wellness brand." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <div class="hive-image-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="hive-content">
+        <h2 class="hive-heading">מוכנים לחוות את ההבדל?</h2>
+        <p class="hive-description">טיפול אחד יכול לשנות את האופן שבו הגוף שלך מרגיש — קבעו תור עוד היום</p>
+        <div class="hive-buttons">
+          <a href="https://api.whatsapp.com/send?phone=972526842282" class="btn-primary hive-cta-main">
+            <span class="btn-text">✦ לתיאום טיפול עכשיו</span>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=972526842282" class="btn-secondary hive-cta-secondary">
+            <span class="btn-text">לפרטים נוספים ←</span>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="hive-decoration-stones" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none">
-      <ellipse cx="60" cy="95" rx="45" ry="18" fill="#8B6F5C" opacity="0.12"></ellipse>
-      <path d="M35 75 C35 55, 85 55, 85 75 C85 95, 35 95, 35 75 Z" fill="#6B5B4F" opacity="0.9"></path>
-      <path d="M42 60 C42 45, 78 45, 78 60 C78 75, 42 75, 42 60 Z" fill="#7D6B5D" opacity="0.9"></path>
-      <path d="M50 42 C50 32, 70 32, 70 42 C70 52, 50 52, 50 42 Z" fill="#8B7B6D" opacity="0.9"></path>
-    </svg>
+    <div class="hive-decoration" aria-hidden="true">
+      <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,20 Q20,5 30,20 T50,20 T70,20 T90,20 T110,20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"></path>
+        <circle cx="30" cy="20" r="2" fill="currentColor" opacity="0.4"></circle>
+        <circle cx="50" cy="20" r="2" fill="currentColor" opacity="0.4"></circle>
+        <circle cx="70" cy="20" r="2" fill="currentColor" opacity="0.4"></circle>
+        <circle cx="90" cy="20" r="2" fill="currentColor" opacity="0.4"></circle>
+      </svg>
+    </div>
   </div>
 </section>
 <section data-band-index="5" id="stats" class="index-stats-section" data-layout-spec="בית-stats" dir="rtl"> <div class="index-stats-container"> <div class="index-stats-header"> <h2 class="index-stats-title">מספרים שמדברים בעד עצמם</h2> <p class="index-stats-subtitle" style="color: rgb(243, 235, 221) !important;">שנים של ניסיון, מאות לקוחות מרוצים, וטיפולים שמותאמים אישית לכל גוף ולכל צורך — זו המחויבות שלי אליך.</p> </div> <div class="index-stats-row-wrapper"> <div class="index-stats-grid zappy-preserve-css-grid" id="zappy-auto-grid-1786019461832-tacf01" data-zappy-auto-grid="true" data-original-item-width="265" data-original-gap="24px" style="display: grid; --zappy-grid-cols: repeat(auto-fit, minmax(min(100%, 265px), 1fr)); grid-template-columns: repeat(auto-fit, minmax(min(100%, 265px), 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true"> <article class="index-stat-tile" id="zappy-section-18" data-grid-item-index="0"> <p class="zappy-editable"><span class="index-stat-number">+12</span> </p><h3 class="index-stat-label">שנות ניסיון</h3> <p class="zappy-editable"><small class="index-stat-support">עיסוי טיפולי ואימון כושר אישי</small> </p></article> <article class="index-stat-tile" id="zappy-section-19" data-grid-item-index="1"> <p class="zappy-editable"><span class="index-stat-number">+500</span> </p><h3 class="index-stat-label">לקוחות חוזרים</h3> <p class="zappy-editable"><small class="index-stat-support">שמירה על קשר ארוך-טווח עם כל מטופל</small> </p></article> <article class="index-stat-tile" id="zappy-section-20" data-grid-item-index="2"> <p class="zappy-editable"><span class="index-stat-number">100%</span> </p><h3 class="index-stat-label">טיפול אישי</h3> <p class="zappy-editable"><small class="index-stat-support">כל פגישה מותאמת לצרכים הייחודיים שלך</small> </p></article> <article class="index-stat-tile" id="zappy-section-21" data-grid-item-index="3"> <p class="zappy-editable"><span class="index-stat-number">4</span> </p><h3 class="index-stat-label">תחומי התמחות</h3> <p class="zappy-editable"><small class="index-stat-support">עיסוי, כושר, שיקום ותמיכה בהיריון</small> </p></article> </div> </div> </div> <div class="index-stats-divider-wrapper"> <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0,90 L0,55 Q150,30 300,48 T600,35 Q750,22 900,42 T1200,38 L1200,90 Z" fill="var(--bg-dark)"></path> </svg> </div> </section>
