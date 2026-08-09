@@ -7080,6 +7080,13 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   flex-direction: column !important;
   min-height: 0 !important;
 }
+
+#testimonials .index-testimonials-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-self: stretch !important;
+  height: 100% !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
