@@ -1,4 +1,4 @@
-# יוסי חי לוי – אימונים אישיים וייעוץ בתזונה — Generative Engine Optimization Map
+# יוסי חי לוי – מעסה מוסמך ומאמן כושר אישי — Generative Engine Optimization Map
 
 > A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.
 
@@ -37,7 +37,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About יוסי חי לוי – אימונים אישיים וייעוץ בתזונה
+## About יוסי חי לוי – מעסה מוסמך ומאמן כושר אישי
 A massage therapy business seeking a landing page to attract clients and showcase their services. The brand focuses on relaxation, wellness, and therapeutic treatments.
 
 ## Target Audience
