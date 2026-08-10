@@ -6787,6 +6787,23 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   display: flex !important;
   flex-direction: column !important;
 }
+
+@media (min-width: 768px) {
+.index-testimonials-section .index-testimonials-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 28px;
+}
+}
+
+.index-testimonials-section .index-testimonials-grid {
+  grid-template-rows: 1fr !important;
+  align-items: stretch !important;
+}
+
+#testimonials #zappy-auto-grid-1786019461820-auguwk {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-rows: 1fr !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
