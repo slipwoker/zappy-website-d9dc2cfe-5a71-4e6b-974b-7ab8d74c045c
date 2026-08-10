@@ -5390,14 +5390,14 @@ function initZappyAccessibilityToolbar() {
         // Detect current page language and direction from <html> element
         // so the toolbar matches the active language on multi-language sites.
         var htmlEl = document.documentElement;
-        var pageLang = (htmlEl.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+        var pageLang = (htmlEl.getAttribute('lang') || 'he').toLowerCase().split('-')[0];
         var pageDir = (htmlEl.getAttribute('dir') || '').toLowerCase();
         var rtlLangs = ['he', 'ar', 'fa', 'ur', 'yi', 'iw'];
         var isPageRTL = pageDir === 'rtl' || rtlLangs.indexOf(pageLang) !== -1;
         var buttonSide = isPageRTL ? 'left' : 'right';
 
         var langMap = { en: 'en-US', es: 'es-ES', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', pt: 'pt-PT', nl: 'nl-NL', he: 'he-IL', ar: 'ar-SA' };
-        var forceLang = langMap[pageLang] || 'en-US';
+        var forceLang = langMap[pageLang] || 'he-IL';
 
         var iconPos = { bottom: { size: 50, units: 'px' }, type: 'fixed' };
         iconPos[buttonSide] = { size: 20, units: 'px' };

@@ -124,18 +124,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
+}html[dir="rtl"]{
   font-size: 16px !important;
   direction: rtl;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
-}
-
-body {
+}html[dir="rtl"]{
   font-size: 16px !important;
   line-height: 1.7 !important;
   font-family: 'Rubik', sans-serif;
@@ -276,23 +272,11 @@ button {
   border: none;
   background: none;
   font-family: 'Rubik', sans-serif;
-}
-
-input,
+}input,
 textarea,
-select{
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  border-radius: var(--radius-input);
-  border: 1px solid var(--border-light);
-  padding: 12px 16px;
-  background-color: #FFFFFF;
-  color: var(--text-dark);
-  transition: var(--transition-default);
-  width: 100%;
-  
-  direction: rtl;
-}
+select{font-family: 'Rubik', sans-serif;font-size: 16px;border-radius: var(--radius-input);border: 1px solid var(--border-light);padding: 12px 16px;background-color: #FFFFFF;color: var(--text-dark);transition: var(--transition-default);width: 100%;}html[dir="rtl"] input,
+textarea,
+select{direction: rtl;}
 
 input:focus,
 textarea:focus,
@@ -514,9 +498,9 @@ blockquote {
 
 .text-center { text-align: center !important; }
 
-.text-right { text-align: right !important; }
+.text-right { text-align: start !important; }
 
-.text-left { text-align: left !important; }
+.text-left { text-align: end !important; }
 
 .d-flex { display: flex !important; }
 
@@ -610,10 +594,7 @@ blockquote {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-html[dir="rtl"] .whatsapp-float {
-  right: 20px;
-  left: auto;
-}
+.whatsapp-float{right: 20px;left: auto;}
 
 html[dir="ltr"] .whatsapp-float,
 html:not([dir]) .whatsapp-float {
@@ -720,9 +701,7 @@ p { font-size: 14px !important; }
     bottom: 16px;
   }
 
-html[dir="rtl"] .whatsapp-float {
-    right: 16px;
-  }
+.whatsapp-float{right: 16px;}
 
 html[dir="ltr"] .whatsapp-float,
   html:not([dir]) .whatsapp-float {
@@ -984,7 +963,7 @@ html[dir="ltr"] .whatsapp-float,
     padding: 12px 16px;
     font-size: 16px;
     border-radius: 8px;
-    text-align: right;
+    text-align: start;
   }
 
 .nav-link::after {
@@ -1243,7 +1222,7 @@ html[dir="ltr"] .whatsapp-float,
     padding: 12px 16px;
     font-size: 16px;
     border-radius: 8px;
-    text-align: right;
+    text-align: start;
   }
 
 .nav-link::after {
@@ -1442,46 +1421,28 @@ html[lang="fr"] .nav-cta-container {
 /* ============================================
    RTL DESKTOP LAYOUT (Hebrew, Arabic)
    ============================================ */
-html[dir="rtl"] .nav-container,
+.nav-container,
 html[lang="he"] .nav-container,
-html[lang="ar"] .nav-container {
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
+html[lang="ar"] .nav-container{flex-direction: row-reverse;justify-content: space-between;}
 
 /* CTA on the left in RTL */
-html[dir="rtl"] .nav-cta-container,
+.nav-cta-container,
 html[lang="he"] .nav-cta-container,
-html[lang="ar"] .nav-cta-container {
-  order: -1;
-  margin: 0;
-}
+html[lang="ar"] .nav-cta-container{order: -1;margin: 0;}
 
 /* Wrapper groups menu and logo together on the right */
-html[dir="rtl"] .nav-right-group,
+.nav-right-group,
 html[lang="he"] .nav-right-group,
-html[lang="ar"] .nav-right-group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  order: 1;
-  flex: 1;
-  min-width: 0;
-  flex-direction: row-reverse;
-}
+html[lang="ar"] .nav-right-group{display: flex;align-items: center;gap: 1rem;order: 1;flex: 1;min-width: 0;flex-direction: row-reverse;}
 
 /* Within wrapper: Logo on far right, menu to its left */
-html[dir="rtl"] .nav-right-group .nav-brand,
+.nav-right-group .nav-brand,
 html[lang="he"] .nav-right-group .nav-brand,
-html[lang="ar"] .nav-right-group .nav-brand {
-  order: 2;
-}
+html[lang="ar"] .nav-right-group .nav-brand{order: 2;}
 
-html[dir="rtl"] .nav-right-group .nav-menu,
+.nav-right-group .nav-menu,
 html[lang="he"] .nav-right-group .nav-menu,
-html[lang="ar"] .nav-right-group .nav-menu {
-  order: 1;
-}
+html[lang="ar"] .nav-right-group .nav-menu{order: 1;}
 
 /* ============================================
    DROPDOWN MENUS (Desktop)
@@ -1540,12 +1501,9 @@ html[lang="ar"] .nav-right-group .nav-menu {
   margin: 0;
 }
 
-html[dir="rtl"] .dropdown-menu,
+.dropdown-menu,
 html[lang="he"] .dropdown-menu,
-html[lang="ar"] .dropdown-menu {
-  right: 0;
-  left: auto;
-}
+html[lang="ar"] .dropdown-menu{right: 0;left: auto;}
 
 html[dir="ltr"] .dropdown-menu,
 html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
@@ -1741,20 +1699,12 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
      which breaks AI centering hacks (top:50% + margin-top:-Npx).
      Use explicit left/right + transform for robust vertical centering. */
   .nav-brand,
-  html[dir="rtl"] .nav-brand,
+  .nav-brand,
   html[lang="he"] .nav-brand,
   html[lang="ar"] .nav-brand,
   html[dir="rtl"] .nav-right-group .nav-brand,
   html[lang="he"] .nav-right-group .nav-brand,
-  html[lang="ar"] .nav-right-group .nav-brand {
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    text-align: center;
-    order: 0 !important;
-  }
+  html[lang="ar"] .nav-right-group .nav-brand{position: absolute !important;left: 50% !important;top: 50% !important;transform: translate(-50%, -50%) !important;margin: 0 !important;text-align: center;order: 0 !important;}
   
   /* Mobile logo size: fixed at 35px/110px — do not adjust, especially for e-commerce/catalog sites */
   .logo {
@@ -1868,11 +1818,9 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
     font-size: 0.9em;
   }
   
-  html[dir="rtl"] .dropdown-menu li a,
+  .dropdown-menu li a,
   html[lang="he"] .dropdown-menu li a,
-  html[lang="ar"] .dropdown-menu li a {
-    padding: 12px 50px 12px 30px !important;
-  }
+  html[lang="ar"] .dropdown-menu li a{padding: 12px 50px 12px 30px !important;}
 
   /* Mobile submenu links: use nav panel text color instead of desktop submenu color.
      Desktop submenu uses light bg + dark text, but mobile submenu is inline (transparent)
@@ -1978,32 +1926,21 @@ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .dropdown-menu {
    Uses !important to override any inline styles
    ============================================ */
 @media (max-width: 768px) {
-  html[dir="rtl"] .mobile-toggle,
+  .mobile-toggle,
   html[lang="he"] .mobile-toggle,
-  html[lang="ar"] .mobile-toggle {
-    left: auto !important;
-    right: 12px !important;
-  }
+  html[lang="ar"] .mobile-toggle{left: auto !important;right: 12px !important;}
   
-  html[dir="rtl"] .phone-header-btn,
+  .phone-header-btn,
   html[lang="he"] .phone-header-btn,
-  html[lang="ar"] .phone-header-btn {
-    left: 12px !important;
-    right: auto !important;
-  }
+  html[lang="ar"] .phone-header-btn{left: 12px !important;right: auto !important;}
   
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    right: 0 !important;
-    left: auto !important;
-  }
+  html[lang="ar"] .nav-menu{right: 0 !important;left: auto !important;}
   
-  html[dir="rtl"] .nav-menu a,
+  .nav-menu a,
   html[lang="he"] .nav-menu a,
-  html[lang="ar"] .nav-menu a {
-    text-align: right !important;
-  }
+  html[lang="ar"] .nav-menu a{text-align: start !important;}
   
   /* Hide desktop language switcher on mobile - hamburger menu handles it */
   /* High specificity to override stored CSS */
@@ -2082,7 +2019,7 @@ nav.navbar {
      this rule wins the cascade via equal-or-higher specificity. */
   #navMenu,
   .nav-menu,
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[dir="rtl"] .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
@@ -2093,11 +2030,7 @@ nav.navbar {
   [dir="rtl"] .nav-container .nav-menu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    position: fixed !important;
-    top: var(--total-header-height, var(--zappy-navbar-bottom, 70px)) !important;
-    right: var(--ios-viewport-gap, 0px) !important;
-  }
+  html[lang="ar"] .nav-menu{position: fixed !important;top: var(--total-header-height, var(--zappy-navbar-bottom, 70px)) !important;right: var(--ios-viewport-gap, 0px) !important;}
 }
 
 /* Constrained nav-container - content limited to 1200px and centered */
@@ -2114,37 +2047,28 @@ nav.navbar {
 
 /* RTL layout for cloned sites (without nav-right-group) */
 /* Base RTL styles - apply to all screens */
-html[dir="rtl"] .nav-container,
+.nav-container,
 html[lang="he"] .nav-container,
-html[lang="ar"] .nav-container {
-  justify-content: space-between !important;
-}
+html[lang="ar"] .nav-container{justify-content: space-between !important;}
 
 /* Logo stays on right in RTL - DESKTOP ONLY */
 /* On mobile, logo should be centered (handled by mobile media query) */
 @media (min-width: 769px) {
-  html[dir="rtl"] .nav-brand,
+  .nav-brand,
   html[dir="rtl"] .logo-link,
   html[lang="he"] .nav-brand,
   html[lang="he"] .logo-link,
   html[lang="ar"] .nav-brand,
-  html[lang="ar"] .logo-link {
-    order: 2 !important;
-    margin-left: 1.5rem !important;
-  }
+  html[lang="ar"] .logo-link{order: 2 !important;margin-left: 1.5rem !important;}
 }
 
 /* Base RTL nav-menu styles - display:flex but NOT flex-direction (that's desktop-only) */
-html[dir="rtl"] .nav-menu,
+.nav-menu,
 html[lang="he"] .nav-menu,
-html[lang="ar"] .nav-menu {
-  order: 1 !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
+html[lang="ar"] .nav-menu{order: 1 !important;margin-right: 0 !important;margin-left: 0 !important;}
 
 /* CTA button pushed to far left in RTL */
-html[dir="rtl"] .cta-button,
+.cta-button,
 html[dir="rtl"] a.cta-button,
 html[dir="rtl"] .nav-cta-btn,
 html[lang="he"] .cta-button,
@@ -2152,35 +2076,22 @@ html[lang="he"] a.cta-button,
 html[lang="he"] .nav-cta-btn,
 html[lang="ar"] .cta-button,
 html[lang="ar"] a.cta-button,
-html[lang="ar"] .nav-cta-btn {
-  order: 0 !important;
-  margin-right: auto !important;
-  margin-left: 0 !important;
-}
+html[lang="ar"] .nav-cta-btn{order: 0 !important;margin-right: auto !important;margin-left: 0 !important;}
 
 /* DESKTOP ONLY: Horizontal flex layout for RTL navbar - prevents breaking mobile vertical menu */
 @media (min-width: 769px) {
-  html[dir="rtl"] .nav-container,
+  .nav-container,
   html[lang="he"] .nav-container,
-  html[lang="ar"] .nav-container {
-    flex-direction: row-reverse !important;
-  }
+  html[lang="ar"] .nav-container{flex-direction: row-reverse !important;}
   
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-    /* flex:1 ensures menu fills space between brand and CTA so items
+  html[lang="ar"] .nav-menu{display: flex !important;flex-direction: row !important;align-items: center !important;gap: 1.5rem !important;/* flex:1 ensures menu fills space between brand and CTA so items
        stay adjacent to the logo instead of centering when the
        .nav-right-group wrapper is absent (cloned sites, etc.).
        justify-content: flex-start pushes items toward the logo
        (in RTL, flex-start = right side, adjacent to the brand). */
-    flex: 1 !important;
-    justify-content: flex-start !important;
-  }
+    flex: 1 !important;justify-content: flex-start !important;}
 }
 
 /* ============================================
@@ -2188,28 +2099,9 @@ html[lang="ar"] .nav-cta-btn {
    ============================================ */
 
 /* Post-generation fix: Remove main element margin-top and padding-top */
-main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !important; }
-
-/* Footer Styles */
-.site-footer {
-  --primary: #C9785C;
-  --secondary: #7D8664;
-  --accent: #90A9B7;
-  --bg-dark: #2F2925;
-  --bg-deeper: #231f1b;
-  --text-light: #F3EBDD;
-  --text-muted-footer: rgba(243, 235, 221, 0.65);
-  --border-dark: #8d837c;
-  --border-accent: rgba(201, 120, 92, 0.4);
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  font-family: 'Rubik', sans-serif;
-  direction: rtl;
-  padding-top: 4rem;
-  padding-bottom: 0;
-  position: relative;
-  overflow: hidden;
-}
+main:not(.courses-page-main) { margin-top: 0 !important; padding-top: 0 !important; }/* Footer Styles */
+.site-footer{--primary: #C9785C;--secondary: #7D8664;--accent: #90A9B7;--bg-dark: #2F2925;--bg-deeper: #231f1b;--text-light: #F3EBDD;--text-muted-footer: rgba(243, 235, 221, 0.65);--border-dark: #8d837c;--border-accent: rgba(201, 120, 92, 0.4);background-color: var(--bg-dark);color: var(--text-light);font-family: 'Rubik', sans-serif;padding-top: 4rem;padding-bottom: 0;position: relative;overflow: hidden;}html[dir="rtl"] /* Footer Styles */
+.site-footer{direction: rtl;}
 
 .site-footer::before {
   content: '';
@@ -2671,9 +2563,9 @@ blockquote::after, .quote::after, [data-quote]::after {
   display: inline-block;
 }
 
-html[dir="rtl"] blockquote::before, html[dir="rtl"] .quote::before, html[dir="rtl"] [data-quote]::before { content: "\201D"; }
+blockquote::before, html[dir="rtl"] .quote::before, html[dir="rtl"] [data-quote]::before{content: "\201D";}
 
-html[dir="rtl"] blockquote::after, html[dir="rtl"] .quote::after, html[dir="rtl"] [data-quote]::after { content: "\201C"; }
+blockquote::after, html[dir="rtl"] .quote::after, html[dir="rtl"] [data-quote]::after{content: "\201C";}
 
 /* V2 Decorative Helpers — section divider flourish */
 hr.section-flourish, .section-flourish, [data-section-divider] {
@@ -2721,32 +2613,17 @@ hr.section-flourish, .section-flourish, [data-section-divider] {
 .footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
 
 /* RTL footer contact: icon on the right (start) side, text on the left */
-html[dir="rtl"] .footer-contact li,
+.footer-contact li,
 html[dir="rtl"] .site-footer .footer-contact li,
-html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li {
-  flex-direction: row !important;
-  justify-content: flex-start !important;
-}
+html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li{flex-direction: row !important;justify-content: flex-start !important;}
 
-html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
+.footer-contact .contact-icon{order: 0 !important;}
 
-html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
+.footer-contact .contact-text{order: 1 !important;}
 
-html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
-
-/* hero */
-.index-hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-  overflow: visible;
-  padding-bottom: 90px;
-  direction: rtl;
-}
+.footer-contact li > a{flex-direction: row !important;}/* hero */
+.index-hero-section{position: relative;width: 100%;min-height: 100vh;display: flex;align-items: center;background-color: var(--bg-dark);color: var(--text-dark);overflow: visible;padding-bottom: 90px;}html[dir="rtl"] /* hero */
+.index-hero-section{direction: rtl;}
 
 /* ── Background Image ── */
 .index-hero-section .index-hero-bg {
@@ -2805,20 +2682,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
-}
-
-/* ── Card ── */
-.index-hero-section .index-hero-card {
-  background: rgba(243, 235, 221, 0.82);
-  border: 1px solid rgba(220, 207, 190, 0.6);
-  border-radius: 16px;
-  padding: 48px 40px;
-  max-width: 520px;
-  width: 100%;
-  box-shadow: 0 16px 56px rgba(80, 50, 30, 0.22);
-  text-align: right;
-  direction: rtl;
-}
+}/* ── Card ── */
+.index-hero-section .index-hero-card{background: rgba(243, 235, 221, 0.82);border: 1px solid rgba(220, 207, 190, 0.6);border-radius: 16px;padding: 48px 40px;max-width: 520px;width: 100%;box-shadow: 0 16px 56px rgba(80, 50, 30, 0.22);text-align: start;}html[dir="rtl"] /* ── Card ── */
+.index-hero-section .index-hero-card{direction: rtl;}
 
 /* ── Label ── */
 .index-hero-section .index-hero-label {
@@ -2852,18 +2718,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.75;
   color: var(--text-dark);
   margin: 0 0 20px 0;
-}
-
-/* ── Trust Line ── */
-.index-hero-section .index-hero-trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  margin: 0 0 28px 0;
-  padding: 0;
-  justify-content: flex-start;
-  direction: rtl;
-}
+}/* ── Trust Line ── */
+.index-hero-section .index-hero-trust{display: flex;flex-wrap: wrap;gap: 10px 18px;margin: 0 0 28px 0;padding: 0;justify-content: flex-start;}html[dir="rtl"] /* ── Trust Line ── */
+.index-hero-section .index-hero-trust{direction: rtl;}
 
 .index-hero-section .index-hero-trust-item {
   font-family: 'Rubik', sans-serif;
@@ -2880,18 +2737,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--secondary);
   font-size: 0.8rem;
   flex-shrink: 0;
-}
-
-/* ── CTAs ── */
-.index-hero-section .index-hero-ctas {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  justify-content: flex-start;
-  direction: rtl;
-}
+}/* ── CTAs ── */
+.index-hero-section .index-hero-ctas{display: flex;flex-direction: row;flex-wrap: wrap;gap: 12px;align-items: center;justify-content: flex-start;}html[dir="rtl"] /* ── CTAs ── */
+.index-hero-section .index-hero-ctas{direction: rtl;}
 
 .index-hero-section .index-hero-btn-primary {
   display: inline-flex;
@@ -3037,19 +2885,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 @media (max-width: 768px) {
 .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 28px !important; }
-}
-
-/* services */
-.index-services-section {
-  position: relative;
-  overflow: visible;
-  background-color: #FAF7F2;
-  background-image: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);
-  color: var(--text-dark);
-  padding: 96px 24px 90px;
-  direction: rtl;
-  font-family: 'Rubik', sans-serif;
-}
+}/* services */
+.index-services-section{position: relative;overflow: visible;background-color: #FAF7F2;background-image: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);color: var(--text-dark);padding: 96px 24px 90px;font-family: 'Rubik', sans-serif;}html[dir="rtl"] /* services */
+.index-services-section{direction: rtl;}
 
 /* Linen texture overlay */
 .index-services-section .index-services-texture {
@@ -3111,16 +2949,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   max-width: 560px;
   margin: 0 auto;
   text-align: center;
-}
-
-/* Grid */
-.index-services-section .index-services-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
-  align-items: start;
-  direction: rtl;
-}
+}/* Grid */
+.index-services-section .index-services-grid{display: grid;grid-template-columns: 1fr 1fr 1fr;gap: 24px;align-items: start;}html[dir="rtl"] /* Grid */
+.index-services-section .index-services-grid{direction: rtl;}
 
 /* Card base */
 .index-services-section .index-services-card {
@@ -3186,7 +3017,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   border-radius: 8px;
   padding: 3px 10px;
   margin-bottom: 10px;
-  text-align: right;
+  text-align: start;
 }
 
 /* Card content */
@@ -3203,7 +3034,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.4;
   color: var(--text-dark);
   margin-bottom: 12px;
-  text-align: right;
+  text-align: start;
 }
 
 .index-services-section .index-services-card-text {
@@ -3212,7 +3043,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.75;
   color: var(--text-muted);
   margin-bottom: 20px;
-  text-align: right;
+  text-align: start;
 }
 
 /* Card link */
@@ -3335,18 +3166,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-services-section .index-services-card {
     padding: 24px;
   }
-}
-
-/* benefits */
-.index-benefits-section {
-  position: relative;
-  overflow: visible;
-  background: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);
-  background-color: #FAF7F2;
-  color: var(--text-dark);
-  padding: 96px 24px 90px;
-  direction: rtl;
-}
+}/* benefits */
+.index-benefits-section{position: relative;overflow: visible;background: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);background-color: #FAF7F2;color: var(--text-dark);padding: 96px 24px 90px;}html[dir="rtl"] /* benefits */
+.index-benefits-section{direction: rtl;}
 
 /* Linen texture overlay */
 .index-benefits-section::before {
@@ -3356,19 +3178,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
-}
-
-.index-benefits-container {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 480px;
-  gap: 64px;
-  align-items: start;
-  direction: rtl;
-}
+}.index-benefits-container{position: relative;z-index: 1;max-width: 1200px;margin: 0 auto;display: grid;grid-template-columns: 1fr 480px;gap: 64px;align-items: start;}html[dir="rtl"] .index-benefits-container{direction: rtl;}
 
 /* ── CONTENT COLUMN ── */
 .index-benefits-content {
@@ -3408,15 +3218,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 28px;
-}
-
-.index-benefit-row {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 16px;
-  align-items: start;
-  direction: rtl;
-}
+}.index-benefit-row{display: grid;grid-template-columns: 52px 1fr;gap: 16px;align-items: start;}html[dir="rtl"] .index-benefit-row{direction: rtl;}
 
 .index-benefit-icon-badge {
   width: 52px;
@@ -3614,21 +3416,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-benefits-section .index-benefits-title {
     font-size: 1.7rem;
   }
-}
-
-/* about */
-.index-about-section {
-  position: relative;
-  overflow: visible;
-  background-color: #E8EFF3;
-  background-image:
+}/* about */
+.index-about-section{position: relative;overflow: visible;background-color: #E8EFF3;background-image:
     radial-gradient(ellipse at 80% 20%, rgba(144,169,183,0.18) 0%, transparent 60%),
     radial-gradient(ellipse at 10% 80%, rgba(201,120,92,0.07) 0%, transparent 50%),
-    linear-gradient(180deg, #EBF0F4 0%, #E2EBF0 100%);
-  color: var(--text-dark);
-  padding: 96px 24px 80px;
-  direction: rtl;
-}
+    linear-gradient(180deg, #EBF0F4 0%, #E2EBF0 100%);color: var(--text-dark);padding: 96px 24px 80px;}html[dir="rtl"] /* about */
+.index-about-section{direction: rtl;}
 
 /* Background blob decoration */
 .index-about-section .index-about-bg-blob {
@@ -3682,7 +3475,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--primary);
   text-transform: uppercase;
   margin-bottom: 12px;
-  text-align: right;
+  text-align: start;
 }
 
 .index-about-section .index-about-h2 {
@@ -3692,7 +3485,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.3;
   color: var(--text-dark);
   margin: 0 0 12px 0;
-  text-align: right;
+  text-align: start;
 }
 
 .index-about-section .index-about-h3 {
@@ -3702,7 +3495,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.4;
   color: var(--accent);
   margin: 0 0 24px 0;
-  text-align: right;
+  text-align: start;
 }
 
 .index-about-section .index-about-p {
@@ -3711,7 +3504,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.7;
   color: var(--text-muted);
   margin: 0 0 14px 0;
-  text-align: right;
+  text-align: start;
 }
 
 .index-about-section .index-about-p:last-of-type {
@@ -3870,18 +3663,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-about-section .index-about-bg-blob {
     display: none;
   }
-}
-
-/* testimonials */
-.index-testimonials-section {
-  position: relative;
-  overflow: visible;
-  background-color: #F0EBE3;
-  background-image: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);
-  color: var(--text-dark);
-  padding: 96px 24px 120px;
-  direction: rtl;
-}
+}/* testimonials */
+.index-testimonials-section{position: relative;overflow: visible;background-color: #F0EBE3;background-image: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);color: var(--text-dark);padding: 96px 24px 120px;}html[dir="rtl"] /* testimonials */
+.index-testimonials-section{direction: rtl;}
 
 /* Subtle linen texture overlay */
 .index-testimonials-section::before {
@@ -3936,16 +3720,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   max-width: 560px;
   margin: 0 auto;
   text-align: center;
-}
-
-/* ── Grid ── */
-.index-testimonials-section .index-testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  direction: rtl;
-  align-items: start;
-}
+}/* ── Grid ── */
+.index-testimonials-section .index-testimonials-grid{display: grid;grid-template-columns: 1fr;gap: 24px;align-items: start;}html[dir="rtl"] /* ── Grid ── */
+.index-testimonials-section .index-testimonials-grid{direction: rtl;}
 
 /* ── Cards ── */
 .index-testimonials-section .index-testimonials-card {
@@ -4004,7 +3781,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 1.08rem;
   line-height: 1.8;
   color: var(--text-dark);
-  text-align: right;
+  text-align: start;
   margin: 0;
   font-style: italic;
 }
@@ -4016,7 +3793,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   gap: 4px;
   padding-block-start: 20px;
   border-top: 1px solid var(--border-light);
-  text-align: right;
+  text-align: start;
 }
 
 .index-testimonials-section .index-testimonials-name {
@@ -4103,21 +3880,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   .index-testimonials-section .index-testimonials-quote p {
     font-size: 1rem;
   }
-}
-
-/* stats */
-.index-stats-section {
-  position: relative;
-  overflow: visible;
-  background-color: #2F2925;
-  background-image:
+}/* stats */
+.index-stats-section{position: relative;overflow: visible;background-color: #2F2925;background-image:
     radial-gradient(ellipse at 15% 80%, rgba(201,120,92,0.08) 0%, transparent 55%),
     radial-gradient(ellipse at 85% 20%, rgba(125,134,100,0.07) 0%, transparent 50%),
-    linear-gradient(180deg, #4A3526 0%, #2F2925 100%);
-  color: var(--text-light);
-  padding: var(--spacing-section, 96px) 24px 110px;
-  direction: rtl;
-}
+    linear-gradient(180deg, #4A3526 0%, #2F2925 100%);color: var(--text-light);padding: var(--spacing-section, 96px) 24px 110px;}html[dir="rtl"] /* stats */
+.index-stats-section{direction: rtl;}
 
 .index-stats-section::before {
   content: '';
@@ -4168,14 +3936,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   border-radius: var(--radius-card, 16px);
   padding: var(--spacing-card-padding, 32px);
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-}
-
-.index-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-card-gap, 24px);
-  direction: rtl;
-}
+}.index-stats-grid{display: grid;grid-template-columns: repeat(4, 1fr);gap: var(--spacing-card-gap, 24px);}html[dir="rtl"] .index-stats-grid{direction: rtl;}
 
 .index-stat-tile {
   text-align: center;
@@ -4288,21 +4049,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-stat-tile {
     padding: 20px 12px;
   }
-}
-
-/* contact */
-.index-contact-section {
-  position: relative;
-  background-color: #F3EBDD;
-  background-image:
+}/* contact */
+.index-contact-section{position: relative;background-color: #F3EBDD;background-image:
     radial-gradient(ellipse at 90% 10%, rgba(201,120,92,0.08) 0%, transparent 55%),
     radial-gradient(ellipse at 10% 80%, rgba(125,134,100,0.07) 0%, transparent 50%),
-    linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);
-  color: var(--text-dark);
-  padding: 96px 24px;
-  overflow: visible;
-  direction: rtl;
-}
+    linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%);color: var(--text-dark);padding: 96px 24px;overflow: visible;}html[dir="rtl"] /* contact */
+.index-contact-section{direction: rtl;}
 
 /* Warm blob decoration */
 .index-contact-section .contact-blob-decor {
@@ -4349,16 +4101,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: var(--text-dark);
   margin: 0;
   max-width: none !important;
-}
-
-/* Main CTA block */
-.index-contact-section .contact-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-  direction: rtl;
-}
+}/* Main CTA block */
+.index-contact-section .contact-block{display: grid;grid-template-columns: 1fr 1fr;gap: 48px;align-items: start;}html[dir="rtl"] /* Main CTA block */
+.index-contact-section .contact-block{direction: rtl;}
 
 /* Copy column */
 .index-contact-section .contact-copy {
@@ -4371,7 +4116,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.8;
   color: var(--text-muted);
   margin: 0 0 32px 0;
-  text-align: right;
+  text-align: start;
 }
 
 .index-contact-section .contact-prompt {
@@ -4381,7 +4126,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.4;
   color: var(--text-dark);
   margin: 0 0 20px 0;
-  text-align: right;
+  text-align: start;
 }
 
 /* Next steps list */
@@ -4399,7 +4144,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   flex-direction: row;
   align-items: flex-start;
   gap: 12px;
-  text-align: right;
+  text-align: start;
 }
 
 .index-contact-section .step-icon {
@@ -4434,7 +4179,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 600;
   color: var(--text-muted);
   margin: 0 0 14px 0;
-  text-align: right;
+  text-align: start;
   letter-spacing: 0.02em;
 }
 
@@ -4520,7 +4265,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.4;
   color: var(--text-dark);
   margin: 0 0 6px 0;
-  text-align: right;
+  text-align: start;
 }
 
 .index-contact-section .form-subtitle {
@@ -4530,7 +4275,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 0.875rem;
   color: var(--text-muted);
   margin: 0 0 28px 0;
-  text-align: right;
+  text-align: start;
   line-height: 1.6;
 }
 
@@ -4553,29 +4298,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-dark);
-  text-align: right;
+  text-align: start;
   line-height: 1.6;
-}
-
-.index-contact-section .form-input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  background: #FAF7F2;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-dark);
-  text-align: right;
-  direction: rtl;
-  transition: all 0.25s ease;
-  outline: none;
-  box-sizing: border-box;
-  box-shadow: inset 0 2px 8px rgba(80,50,30,0.06);
-  -webkit-appearance: none;
-  appearance: none;
-}
+}.index-contact-section .form-input{width: 100%;padding: 12px 16px;border: 1px solid var(--border-light);border-radius: 12px;background: #FAF7F2;font-family: 'Rubik', sans-serif;font-size: 1rem;line-height: 1.7;color: var(--text-dark);text-align: start;transition: all 0.25s ease;outline: none;box-sizing: border-box;box-shadow: inset 0 2px 8px rgba(80,50,30,0.06);-webkit-appearance: none;appearance: none;}html[dir="rtl"] .index-contact-section .form-input{direction: rtl;}
 
 .index-contact-section .form-input::placeholder {
   color: var(--text-muted);
@@ -4605,7 +4330,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   align-items: flex-start;
   gap: 10px;
   cursor: pointer;
-  text-align: right;
+  text-align: start;
 }
 
 .index-contact-section .privacy-consent-checkbox {
@@ -4739,13 +4464,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
 
 /* RTL footer contact: icon on the right (start) side, text on the left */
-html[dir="rtl"] .footer-contact li, html[dir="rtl"] .site-footer .footer-contact li, html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li { flex-direction: row !important; justify-content: flex-start !important; }
+.footer-contact li, html[dir="rtl"] .site-footer .footer-contact li, html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li{flex-direction: row !important;justify-content: flex-start !important;}
 
-html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
+.footer-contact .contact-icon{order: 0 !important;}
 
-html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
+.footer-contact .contact-text{order: 1 !important;}
 
-html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
+.footer-contact li > a{flex-direction: row !important;}
 
 /* ============================================
    MOBILE RESPONSIVE FIXES (Auto-generated)
@@ -5607,21 +5332,17 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 #mic-init-access-tool #mic-access-tool-general-button,
 ._access-icon {
   display: flex !important;
-}
-
-/* AI-generated section */
+}/* AI-generated section */
 /* =========================================
    PRICING SECTION — The Hive Thai Massage
    ========================================= */
 
-.pricing-hive {
-  background: linear-gradient(160deg, #fdf6f2 0%, #fef9f6 50%, #fdf0e8 100%);
-  padding: 90px 20px 80px;
-  font-family: system-ui, sans-serif;
-  direction: rtl;
-  position: relative;
-  overflow: hidden;
-}
+.pricing-hive{background: linear-gradient(160deg, #fdf6f2 0%, #fef9f6 50%, #fdf0e8 100%);padding: 90px 20px 80px;font-family: system-ui, sans-serif;position: relative;overflow: hidden;}html[dir="rtl"] /* AI-generated section */
+/* =========================================
+   PRICING SECTION — The Hive Thai Massage
+   ========================================= */
+
+.pricing-hive{direction: rtl;}
 
 /* Subtle decorative background shape */
 .pricing-hive::before {
@@ -6007,21 +5728,17 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     gap: 8px;
     padding: 14px 18px;
   }
-}
-
-/* AI-generated section */
+}/* AI-generated section */
 /* =============================================
    FAQ WELLNESS SECTION — The Hive Thai Massage
    ============================================= */
 
-.faq-wellness-section {
-  background: linear-gradient(160deg, #fdf6f0 0%, #f5ede4 50%, #fdf6f0 100%);
-  padding: 90px 20px 80px;
-  font-family: system-ui, sans-serif;
-  direction: rtl;
-  position: relative;
-  overflow: hidden;
-}
+.faq-wellness-section{background: linear-gradient(160deg, #fdf6f0 0%, #f5ede4 50%, #fdf6f0 100%);padding: 90px 20px 80px;font-family: system-ui, sans-serif;position: relative;overflow: hidden;}html[dir="rtl"] /* AI-generated section */
+/* =============================================
+   FAQ WELLNESS SECTION — The Hive Thai Massage
+   ============================================= */
+
+.faq-wellness-section{direction: rtl;}
 
 /* Decorative background blobs */
 .faq-wellness-section::before,
@@ -6124,24 +5841,9 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .faq-wellness-item.active {
   border-color: rgba(201, 120, 92, 0.55);
   box-shadow: 0 6px 28px rgba(201, 120, 92, 0.18), 0 2px 8px rgba(0,0,0,0.06);
-}
-
-/* ---- Question Button ---- */
-.faq-wellness-question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 20px 24px;
-  text-align: right;
-  direction: rtl;
-  gap: 16px;
-  transition: background 0.25s ease;
-  font-family: system-ui, sans-serif;
-}
+}/* ---- Question Button ---- */
+.faq-wellness-question{display: flex;align-items: center;justify-content: space-between;width: 100%;background: transparent;border: none;cursor: pointer;padding: 20px 24px;text-align: start;gap: 16px;transition: background 0.25s ease;font-family: system-ui, sans-serif;}html[dir="rtl"] /* ---- Question Button ---- */
+.faq-wellness-question{direction: rtl;}
 
 .faq-wellness-question:hover {
   background: rgba(201, 120, 92, 0.05);
@@ -6332,22 +6034,17 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .faq-wellness-list {
     gap: 12px;
   }
-}
-
-/* AI-generated section */
+}/* AI-generated section */
 /* ============================================
    GALLERY — THE HIVE THAI MASSAGE & WELLNESS
    ============================================ */
 
-.gallery-hive {
-  background-color: #F3EBDD;
-  padding: 90px 24px;
-  font-family: system-ui, sans-serif;
-  direction: rtl;
-  text-align: right;
-  position: relative;
-  overflow: hidden;
-}
+.gallery-hive{background-color: #F3EBDD;padding: 90px 24px;font-family: system-ui, sans-serif;text-align: start;position: relative;overflow: hidden;}html[dir="rtl"] /* AI-generated section */
+/* ============================================
+   GALLERY — THE HIVE THAI MASSAGE & WELLNESS
+   ============================================ */
+
+.gallery-hive{direction: rtl;}
 
 /* Subtle decorative background texture */
 .gallery-hive::before {
@@ -6618,29 +6315,22 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   .gallery-hive__cta-wrap {
     margin-top: 36px;
   }
-}
-
-/* AI-generated section */
+}/* AI-generated section */
 /* ============================================
    CTA SECTION — The Hive Thai Massage
    RTL | Hebrew | Earthy Dark Theme
    ============================================ */
 
-.cta-hive-section {
-  position: relative;
-  width: 100%;
-  background-color: #2F2925;
-  background-image:
+.cta-hive-section{position: relative;width: 100%;background-color: #2F2925;background-image:
     radial-gradient(ellipse at 20% 50%, rgba(201, 120, 92, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse at 80% 20%, rgba(200, 103, 58, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 60% 85%, rgba(212, 132, 90, 0.10) 0%, transparent 45%);
-  padding: 100px 24px 90px;
-  overflow: hidden;
-  direction: rtl;
-  font-family: system-ui, sans-serif;
-  text-align: center;
-  box-sizing: border-box;
-}
+    radial-gradient(ellipse at 60% 85%, rgba(212, 132, 90, 0.10) 0%, transparent 45%);padding: 100px 24px 90px;overflow: hidden;font-family: system-ui, sans-serif;text-align: center;box-sizing: border-box;}html[dir="rtl"] /* AI-generated section */
+/* ============================================
+   CTA SECTION — The Hive Thai Massage
+   RTL | Hebrew | Earthy Dark Theme
+   ============================================ */
+
+.cta-hive-section{direction: rtl;}
 
 /* Warm overlay */
 .cta-hive-overlay {
@@ -6697,24 +6387,9 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   flex-direction: column;
   align-items: center;
   gap: 0;
-}
-
-/* Badge */
-.cta-hive-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(201, 120, 92, 0.18);
-  border: 1px solid rgba(201, 120, 92, 0.40);
-  border-radius: 100px;
-  padding: 7px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #597788;
-  letter-spacing: 0.03em;
-  margin-bottom: 28px;
-  direction: ltr;
-}
+}/* Badge */
+.cta-hive-badge{display: inline-flex;align-items: center;gap: 8px;background: rgba(201, 120, 92, 0.18);border: 1px solid rgba(201, 120, 92, 0.40);border-radius: 100px;padding: 7px 20px;font-size: 13px;font-weight: 500;color: #597788;letter-spacing: 0.03em;margin-bottom: 28px;}html[dir="ltr"] /* Badge */
+.cta-hive-badge{direction: ltr;}
 
 .cta-hive-badge-dot {
   display: inline-block;
@@ -7320,7 +6995,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   html body #navMenu.active,
   html body .navbar .nav-menu.open,
   html body #navMenu.open,
-  html[dir="rtl"] body .navbar .nav-menu,
+  body .navbar .nav-menu,
   html[dir="rtl"] body .navbar #navMenu,
   html[dir="rtl"] body .navbar .nav-menu.active,
   html[dir="rtl"] body .navbar #navMenu.active,
@@ -7335,16 +7010,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   [dir="rtl"] .navbar .nav-menu,
   [dir="rtl"] .navbar #navMenu,
   [dir="rtl"] .navbar .nav-menu.active,
-  [dir="rtl"] .navbar #navMenu.active {
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    max-width: none !important;
-    box-sizing: border-box !important;
-    height: calc(100vh - 70px) !important;
-    height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;
-    max-height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;
-  }
+  [dir="rtl"] .navbar #navMenu.active{left: 0 !important;right: 0 !important;width: 100% !important;max-width: none !important;box-sizing: border-box !important;height: calc(100vh - 70px) !important;height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;max-height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;}
   html body .navbar .nav-menu > li > a,
   html body nav.navbar .nav-menu > li > a,
   html body .navbar #navMenu > li > a,
@@ -7444,12 +7110,11 @@ nav .sub-menu.zappy-empty-submenu,
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
 /* Mobile menu panel is FULL-BLEED (left+right:0) — V1's left:auto pin was for
    the retired half-width drawer and must not return. */
-/* NOTE: Includes both html[dir="rtl"] AND [dir="rtl"] selectors as fallback */
+/* NOTE: Includes both AND [dir="rtl"] selectors as fallback */
 /* because some pages may be wrapped with <html lang="en"> (missing dir="rtl" on html) */
 /* but still have dir="rtl" on <body> or other ancestor elements */
 
-@media (max-width: 768px) {
-  /* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
+@media (max-width: 768px){/* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
   /* Using multiple parent selectors for higher specificity */
   html[dir="rtl"] .navbar .mobile-toggle,
   html[dir="rtl"] nav .mobile-toggle,
@@ -7463,12 +7128,10 @@ nav .sub-menu.zappy-empty-submenu,
   [dir="rtl"] .mobile-toggle,
   html[lang="he"] .mobile-toggle,
   html[lang="ar"] .mobile-toggle {
-    left: auto !important;
-    right: 15px !important;
-  }
+    left: auto !important;right: 15px !important;}
   
   /* RTL Phone Button - positioned on LEFT */
-  html[dir="rtl"] .navbar .phone-header-btn,
+  .navbar .phone-header-btn,
   html[dir="rtl"] nav .phone-header-btn,
   html[dir="rtl"] header .phone-header-btn,
   html[dir="rtl"] .nav-container .phone-header-btn,
@@ -7479,13 +7142,10 @@ nav .sub-menu.zappy-empty-submenu,
   [dir="rtl"] .nav-container .phone-header-btn,
   [dir="rtl"] .phone-header-btn,
   html[lang="he"] .phone-header-btn,
-  html[lang="ar"] .phone-header-btn {
-    left: 15px !important;
-    right: auto !important;
-  }
+  html[lang="ar"] .phone-header-btn{left: 15px !important;right: auto !important;}
   
   /* RTL Mobile Menu panel — full-bleed (matches current overlay generator) */
-  html[dir="rtl"] .navbar .nav-menu,
+  .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
   html[dir="rtl"] .nav-container .nav-menu,
@@ -7496,24 +7156,17 @@ nav .sub-menu.zappy-empty-submenu,
   [dir="rtl"] .nav-container .nav-menu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    max-width: none !important;
-  }
+  html[lang="ar"] .nav-menu{left: 0 !important;right: 0 !important;width: 100% !important;max-width: none !important;}
   
   /* RTL Mobile Menu Links - text align right */
-  html[dir="rtl"] .nav-menu a,
+  .nav-menu a,
   html[dir="rtl"] .nav-menu li,
   [dir="rtl"] .nav-menu a,
   [dir="rtl"] .nav-menu li,
   html[lang="he"] .nav-menu a,
   html[lang="he"] .nav-menu li,
   html[lang="ar"] .nav-menu a,
-  html[lang="ar"] .nav-menu li {
-    text-align: right !important;
-  }
+  html[lang="ar"] .nav-menu li{text-align: right !important;}
 }
 
 /* ========== END RTL MOBILE NAVBAR FIX ========== */
@@ -8178,7 +7831,7 @@ section[class*="hero"][data-zappy-bg-overlay-opacity] > .hero-bg-wrapper {
   }
   #navMenu,
   .nav-menu,
-  html[dir="rtl"] .nav-menu,
+  .nav-menu,
   html[dir="rtl"] .navbar .nav-menu,
   html[dir="rtl"] nav .nav-menu,
   html[dir="rtl"] header .nav-menu,
@@ -8189,18 +7842,14 @@ section[class*="hero"][data-zappy-bg-overlay-opacity] > .hero-bg-wrapper {
   [dir="rtl"] .nav-container .nav-menu,
   [dir="rtl"] .nav-menu,
   html[lang="he"] .nav-menu,
-  html[lang="ar"] .nav-menu {
-    /* Force position:fixed so the --ios-viewport-gap shift is measured
+  html[lang="ar"] .nav-menu{/* Force position:fixed so the --ios-viewport-gap shift is measured
        against the (visual) viewport, not whatever container the menu may
        have been reparented into by earlier v1/v2 patches.
        --zappy-navbar-bottom is set by the runtime JS companion and
        defaults to 70px — this lets us override the v2 `top: 100%` (which
        with position:fixed would resolve to the full viewport height and
        push the menu off-screen). */
-    position: fixed !important;
-    top: var(--zappy-navbar-bottom, 70px) !important;
-    right: var(--ios-viewport-gap, 0px) !important;
-  }
+    position: fixed !important;top: var(--zappy-navbar-bottom, 70px) !important;right: var(--ios-viewport-gap, 0px) !important;}
 }
 
 
@@ -8267,7 +7916,7 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   .nav-menu.open > li.menu-item-has-children > a {
     padding-right: 56px !important;
   }
-  html[dir="rtl"] .navbar .nav-menu.active > li.zappy-products-dropdown > a,
+  .navbar .nav-menu.active > li.zappy-products-dropdown > a,
   html[dir="rtl"] nav.navbar .nav-menu.active > li.zappy-products-dropdown > a,
   html[dir="rtl"] #navMenu.active > li.zappy-products-dropdown > a,
   html[dir="rtl"] .nav-menu.open > li.zappy-products-dropdown > a,
@@ -8278,16 +7927,13 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   html[dir="rtl"] .navbar .nav-menu.active > li.menu-item-has-children > a,
   html[dir="rtl"] nav.navbar .nav-menu.active > li.menu-item-has-children > a,
   html[dir="rtl"] #navMenu.active > li.menu-item-has-children > a,
-  html[dir="rtl"] .nav-menu.open > li.menu-item-has-children > a {
-    padding-right: 16px !important;
-    padding-left: 56px !important;
-  }
+  html[dir="rtl"] .nav-menu.open > li.menu-item-has-children > a{padding-right: 16px !important;padding-left: 56px !important;}
 }
 
-html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+#mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
 html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
 html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
-html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+html[dir="rtl"] ._access-icon{left: 20px !important;right: auto !important;}
 html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
 html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
 html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
@@ -8413,24 +8059,12 @@ html[dir="ltr"] .service-detail.service-reverse .service-detail-content { order:
      left from the center instead of being centered on it. */
   .navbar .nav-brand,
   nav.navbar .nav-brand,
-  html[dir="rtl"] .navbar .nav-brand,
+  .navbar .nav-brand,
   html[dir="rtl"] nav.navbar .nav-brand,
   html[lang="he"] .navbar .nav-brand,
   html[lang="he"] nav.navbar .nav-brand,
   html[lang="ar"] .navbar .nav-brand,
-  html[lang="ar"] nav.navbar .nav-brand {
-    position: absolute !important;
-    left: 50% !important;
-    right: auto !important;
-    top: 50% !important;
-    width: auto !important;
-    min-width: max-content !important;
-    max-width: calc(100% - 168px) !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
+  html[lang="ar"] nav.navbar .nav-brand{position: absolute !important;left: 50% !important;right: auto !important;top: 50% !important;width: auto !important;min-width: max-content !important;max-width: calc(100% - 168px) !important;transform: translate(-50%, -50%) !important;margin: 0 !important;text-align: center !important;justify-content: center !important;}
 
   .navbar .nav-brand .logo-link,
   nav.navbar .nav-brand .logo-link,
@@ -8504,13 +8138,11 @@ section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrappe
   background-image: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.42) 100%), linear-gradient(to right, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.36) 36%, rgba(0,0,0,0.06) 78%) !important;
   background-color: transparent !important;
 }
-html[dir="rtl"] section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="scrim"],
+section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="scrim"],
 html[dir="rtl"] section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"],
 html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > .hero-scrim,
 html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-scrim"],
-html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"] {
-  background-image: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.42) 100%), linear-gradient(to left, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.36) 36%, rgba(0,0,0,0.06) 78%) !important;
-}
+html[dir="rtl"] section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] [class*="scrim"]{background-image: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.32) 62%, rgba(0,0,0,0.42) 100%), linear-gradient(to left, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.36) 36%, rgba(0,0,0,0.06) 78%) !important;}
 section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > img[data-hero-bg],
 section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="hero-bg"] img[data-hero-bg],
 section[data-hero-type="fullscreen-scrim"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrapper"] img[data-hero-bg],
@@ -8559,3 +8191,102 @@ section[class*="hero"]:not([data-zappy-bg-overlay-opacity]) > [class*="bg-wrappe
 
 /* Spec table BiDi fix: isolate cells so mixed LTR/RTL content renders correctly */
 .specs-table th, .specs-table td { unicode-bidi: plaintext !important; }
+
+/* ZAPPY-LTR-TEXTALIGN-OVERRIDES:BEGIN */
+/* ============================================
+   LTR TEXT-ALIGN OVERRIDES FOR RTL-BAKED CONTENT
+   See block comment at top of multiLanguageService.js for full rationale.
+   Patterns covered:
+   - *-card-content / *-card-text  → e-commerce + collections card bodies
+   - *-content-column              → split / two-column section bodies
+   - contact form grid/card blocks → contact form two-column sections
+   - *-info-item / .suggestion-item → contact-form widgets
+   - .order-success-card           → checkout success card
+   - .privacy-consent-label        → contact-form consent checkbox row
+   - .text-left                    → AI sometimes literally writes
+                                     ".text-left { text-align: right }" in
+                                     Hebrew sites — flip it so the class
+                                     name matches its behaviour.
+   Uses text-align: start (resolves to left in LTR, right in RTL via the
+   CSS spec) for the structural patterns; .text-left is forced literally
+   to left because its name is a contract.
+   ============================================ */
+html[dir="ltr"] [class*="-card-content"],
+html[dir="ltr"] [class*="-card-text"],
+html[dir="ltr"] [class*="-content-column"],
+html[dir="ltr"] .suggestion-item,
+html[dir="ltr"] .contact-info-item,
+html[dir="ltr"] .order-success-card {
+  text-align: start !important;
+}
+
+html[dir="ltr"] .text-left {
+  text-align: left !important;
+}
+
+/* Contact form columns/cards are often baked with direction: rtl. In LTR this
+   reverses the grid column placement and moves punctuation to the wrong side
+   of headings (e.g. "?What should you tell us"). */
+html[dir="ltr"] .contact-form-grid,
+html[dir="ltr"] .contact-form-container,
+html[dir="ltr"] .form-card,
+html[dir="ltr"] .reassurance-card,
+html[dir="ltr"] .suggestion-list {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+html[dir="ltr"] .suggestion-item,
+html[dir="ltr"] .contact-info-item {
+  direction: ltr !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+/* Consent labels are often baked with direction: rtl so the checkbox renders
+   on the right. In LTR the checkbox is the first DOM child and should render
+   on the left, before the translated agreement text. */
+html[dir="ltr"] .privacy-consent-label {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Form inputs the AI baked with both `direction: rtl` AND `text-align:
+   right` on contact pages — for LTR visitors the cursor + placeholder must
+   read left-to-right, otherwise typing an English email puts the @ on the
+   wrong side of the input. */
+html[dir="ltr"] .contact-contact-form-section .form-group input,
+html[dir="ltr"] .contact-contact-form-section .form-group textarea {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Solution / service sections baked with direction: rtl — in LTR the text
+   reads backwards (period on the left, right-aligned paragraphs). */
+html[dir="ltr"] .solution-content,
+html[dir="ltr"] .solution-item,
+html[dir="ltr"] .service-detail-content,
+html[dir="ltr"] .service-detail,
+html[dir="ltr"] .solutions-showcase,
+html[dir="ltr"] [class*="solutions-grid"],
+html[dir="ltr"] [class*="solution-description"],
+html[dir="ltr"] [class*="solution-text"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* V2 navbar wrapper: RTL-baked sites only set display:flex on
+   .nav-right-group via the RTL-scoped rule (html[dir="rtl"]/[lang="he"]/
+   [lang="ar"] .nav-right-group). In LTR there is no such rule, so the wrapper
+   collapses to its default display:block and the .nav-menu ul wraps BELOW the
+   .nav-brand logo instead of sitting in the same row. Re-establish the flex
+   row for LTR. Desktop-scoped so it doesn't clobber the mobile
+   "display: contents" rule that flattens the wrapper for the hamburger menu. */
+@media (min-width: 769px) {
+  html[dir="ltr"] .nav-right-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+}
+/* ZAPPY-LTR-TEXTALIGN-OVERRIDES:END */

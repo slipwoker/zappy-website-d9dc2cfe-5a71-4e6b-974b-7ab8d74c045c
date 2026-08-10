@@ -1,27 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yossilevi-musmach.co.il</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il" />
+  </url>
+  <url>
+    <loc>https://yossilevi-musmach.co.il/en</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il" />
   </url>
   <url>
     <loc>https://yossilevi-musmach.co.il/privacy</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il/privacy" />
+  </url>
+  <url>
+    <loc>https://yossilevi-musmach.co.il/en/privacy</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il/privacy" />
   </url>
   <url>
     <loc>https://yossilevi-musmach.co.il/terms</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il/terms" />
+  </url>
+  <url>
+    <loc>https://yossilevi-musmach.co.il/en/terms</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il/terms" />
   </url>
   <url>
     <loc>https://yossilevi-musmach.co.il/accessibility</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il/accessibility" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en/accessibility" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il/accessibility" />
+  </url>
+  <url>
+    <loc>https://yossilevi-musmach.co.il/en/accessibility</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://yossilevi-musmach.co.il/accessibility" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yossilevi-musmach.co.il/en/accessibility" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yossilevi-musmach.co.il/accessibility" />
   </url>
 </urlset>
