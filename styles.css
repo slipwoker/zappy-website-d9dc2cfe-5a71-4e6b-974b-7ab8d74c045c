@@ -7308,6 +7308,41 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+:root {
+  --nav-bg: #F0F7F2 !important;
+  --nav-text: #274B3C !important;
+  --nav-text-hover: var(--accent-color, var(--accent, #F4A97B)) !important;
+  --border-light: #B8C9BE !important;
+  --border-dark: #6E8478 !important;
+  --gradient-primary: linear-gradient(135deg, #27835B 0%, #31A573 100%) !important;
+  --gradient-secondary: linear-gradient(135deg, #87C9AF 0%, var(--accent-color, var(--accent, #F4A97B)) 100%) !important;
+  --gradient-dark-section: linear-gradient(180deg, #2C4A3E 0%, #234038 100%) !important;
+  --gradient-light-section: linear-gradient(180deg, var(--background-color, var(--background, var(--bg-light, #FBFDF9))) 0%, #EEF6F1 100%) !important;
+  --accessibility-focus: var(--primary-color, var(--primary, #2F9E6E)) !important;
+}
+
+.index-hero-section,
+.index-services-section,
+.index-about-section,
+.index-benefits-section,
+.home-section-5-section,
+.home-hive-section,
+.index-stats-section,
+.index-testimonials-section,
+.credentials-section {
+  background: linear-gradient(180deg, var(--background-color, var(--background, var(--bg-light, #FBFDF9))) 0%, #EEF6F1 100%) !important;
+  background-color: var(--background-color, var(--background, var(--bg-light, #FBFDF9))) !important;
+}
+
+.index-benefits-section__heading, #services .index-services-heading, #about-dup-1780358075925 .index-about-h2, .home-section-5-section .section-title, .index-stats-section__title, #testimonials .index-testimonials-title {
+  color: var(--text-color, var(--text, var(--text-dark, #2F3A35))) !important;
+}
+
+#hero .index-hero-btn-secondary, .home-hive-section .btn-secondary {
+  border-color: var(--primary-color, var(--primary, #2F9E6E)) !important;
+  color: var(--primary-color, var(--primary, #2F9E6E)) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -7342,6 +7377,15 @@ body:has(.zappy-announcement-bar) nav.navbar:not(.zappy-catalog-menu),
 body:has(.zappy-announcement-bar) header.navbar,
 body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-search-panel) {
   top: var(--zappy-announcement-height, 40px) !important;
+}
+/* First-paint: pull fullscreen heroes behind the fixed announcement+nav so a
+   transparent --nav-bg does not flash the cream body strip (live FOUC that
+   preview never showed because preview injects the same underlap eagerly). */
+body:has(.zappy-announcement-bar) section[data-hero-type^="fullscreen"],
+body:has(.zappy-announcement-bar) .index-hero-section,
+body:has(.zappy-announcement-bar) main > section[class*="hero"]:first-of-type {
+  margin-top: calc(-1 * var(--zappy-header-stack-height)) !important;
+  padding-top: calc(var(--zappy-header-stack-height)) !important;
 }
 
 
