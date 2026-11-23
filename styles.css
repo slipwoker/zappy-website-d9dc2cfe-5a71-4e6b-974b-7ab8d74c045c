@@ -7343,6 +7343,26 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
   border-color: var(--primary-color, var(--primary, #2F9E6E)) !important;
   color: var(--primary-color, var(--primary, #2F9E6E)) !important;
 }
+
+.index-hero-section .index-hero-btn-primary, .index-services-section .index-services-btn, .index-services-section .btn-primary, .home-hive-section .btn-primary, .home-section-5-section .btn-primary, #zappy-section-18 .gallery-hive .gallery-hive__cta {
+  background: var(--primary-color, var(--primary, #2F9E6E)) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(47,158,110,0.35) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary,
+.home-hive-section .btn-secondary {
+  border-color: var(--primary-color, var(--primary, #2F9E6E)) !important;
+  color: var(--primary-color, var(--primary, #2F9E6E)) !important;
+}
+
+.home-hive-section .btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.home-section-5-section .section-title {
+  color: #FFFFFF !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
