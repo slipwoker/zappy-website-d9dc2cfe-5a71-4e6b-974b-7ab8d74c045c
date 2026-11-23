@@ -550,6 +550,16 @@ window.onload = function() {
 })();
 
 
+/* Added Component Script */
+/* ZAPPY_ISOLATED_COMPONENT_SCRIPT */
+try {
+// No JavaScript required for this static pricing section.
+// All interactive states are handled via CSS hover/focus.
+} catch (e) {
+  if (typeof console !== 'undefined' && console.error) console.error('[Zappy] Added component script failed', e);
+}
+
+
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
   try {
